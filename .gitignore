@@ -1,0 +1,16 @@
+# Working documents kept out of the public repo
+SPEC.md
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# Local data: SQLite DB, LanceDB index, API cache, generated digests
+02-solution/data/
+
+# Secrets
+.env
