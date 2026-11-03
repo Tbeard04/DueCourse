@@ -13,7 +13,21 @@
 - VAT, payroll, or HMRC deadlines (the "second client" generalisation — see README)
 - Practice-management integration
 
-## Success criteria
+## Success criteria (agreed "with the client")
 
-<!-- TODO(evening 2): agreed targets, e.g. 100% triage accuracy vs API ground truth; review of a
-full weekly batch in under N minutes; measured hours/week reduction. -->
+1. **Triage correctness: 100%**, exact-match against the Companies House API's own due dates,
+   re-verified across the whole portfolio by `03-evals/triage_eval.py`. Anything less fails the
+   engagement — a wrong deadline is worse than no tool.
+2. **Time on task: ≥50% reduction** in the measured weekly workflow (deadline check + chasing
+   drafts), baseline vs with-tool, per the protocol in
+   [04-measurement](../04-measurement/measurement.md).
+3. **Nothing sends without a human**: every outgoing email is approved, edited or rejected in
+   the review queue, with the decision logged. Verified structurally (no mail library in the
+   codebase, enforced by a CI test).
+4. **Every quoted rule is real**: 100% of penalty figures and filing rules in drafts verified
+   verbatim against the GOV.UK guidance corpus (citation eval).
+5. **Draft quality is reviewable, not perfect**: rubric pass-rate reported honestly (LLM judge
+   + 30 hand-scores with agreement stats); the queue makes editing cheap, so the bar is
+   "usually sendable with light edits", not "always perfect".
+6. **The office manager can run it** after one 10-minute training session, using the runbook
+   alone.
