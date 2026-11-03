@@ -32,7 +32,7 @@
       "typeVersion": 4.2,
       "position": [220, 0],
       "parameters": {
-        "url": "http://localhost:8000/digest/latest",
+        "url": "http://127.0.0.1:8000/digest/latest",
         "authentication": "genericCredentialType",
         "genericAuthType": "httpHeaderAuth",
         "options": {}

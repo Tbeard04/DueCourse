@@ -25,3 +25,7 @@ workflow built on it can bypass the human review queue.
 
 `Monday 08:00 (schedule)` → `GET /digest/latest (bearer auth)` → `Format message (one-line
 headline + full markdown)` → `POST to practice webhook`.
+
+Note the API URL is `http://127.0.0.1:8000`, not `localhost`: n8n runs on Node, which resolves
+`localhost` to IPv6 (`::1`) first, while uvicorn listens on IPv4 — `localhost` here fails with
+"service refused the connection".
