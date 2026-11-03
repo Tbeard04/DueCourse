@@ -114,7 +114,7 @@ def build_agent(model) -> Agent[DraftDeps, AgentDraft]:
         """Official CH/HMRC guidance chunks — the only permitted source for rules and penalties."""
         try:
             chunks = rag.search(query)
-        except NotImplementedError:
+        except rag.GuidanceUnavailable:
             return [
                 {
                     "note": "guidance corpus not available — do not state any penalty figure"

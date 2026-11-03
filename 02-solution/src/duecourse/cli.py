@@ -126,7 +126,7 @@ def run_weekly(now: bool = typer.Option(False, "--now", help="Run once, immediat
 
 @app.command("index-guidance")
 def index_guidance() -> None:
-    """(Re)build the LanceDB index over guidance/. Requires: uv sync --extra rag"""
+    """(Re)build the LanceDB index over guidance/ (RAG stack installs with plain uv sync)."""
     from . import rag
 
     typer.echo(f"Indexed {rag.build_index()} chunks.")

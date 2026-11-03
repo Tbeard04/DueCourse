@@ -626,6 +626,7 @@ wheels = [
 name = "duecourse"
 version = "0.1.0"
 source = { editable = "." }
+default-groups = ["dev", "rag"]
 dependencies = [
     { name = "apscheduler" },
     { name = "fastapi" },
@@ -639,18 +640,17 @@ dependencies = [
     { name = "uvicorn" },
 ]
 
-[package.optional-dependencies]
-rag = [
-    { name = "lancedb" },
-    { name = "sentence-transformers" },
-]
-
 [package.dev-dependencies]
 dev = [
     { name = "freezegun" },
+    { name = "html2text" },
     { name = "pytest" },
     { name = "respx" },
     { name = "ruff" },
+]
+rag = [
+    { name = "lancedb" },
+    { name = "sentence-transformers" },
 ]
 
 [package.metadata]
@@ -658,24 +658,26 @@ requires-dist = [
     { name = "apscheduler", specifier = ">=3.10" },
     { name = "fastapi", specifier = ">=0.115" },
     { name = "httpx", specifier = ">=0.27" },
-    { name = "lancedb", marker = "extra == 'rag'", specifier = ">=0.15" },
     { name = "pydantic", specifier = ">=2.9" },
     { name = "pydantic-ai", specifier = ">=0.1" },
     { name = "pydantic-settings", specifier = ">=2.5" },
-    { name = "sentence-transformers", marker = "extra == 'rag'", specifier = ">=3.0" },
     { name = "streamlit", specifier = ">=1.38" },
     { name = "tenacity", specifier = ">=9.0" },
     { name = "typer", specifier = ">=0.12" },
     { name = "uvicorn", specifier = ">=0.30" },
 ]
-provides-extras = ["rag"]
 
 [package.metadata.requires-dev]
 dev = [
     { name = "freezegun", specifier = ">=1.5" },
+    { name = "html2text", specifier = ">=2024.2.26" },
     { name = "pytest", specifier = ">=8.0" },
     { name = "respx", specifier = ">=0.21" },
     { name = "ruff", specifier = ">=0.6" },
+]
+rag = [
+    { name = "lancedb", specifier = ">=0.15" },
+    { name = "sentence-transformers", specifier = ">=3.0" },
 ]
 
 [[package]]
@@ -893,6 +895,15 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/48/77/886f09e91a5eadb054ce03b8855323cd2a72f20db76ab4119e0ecda65eef/hf_xet-1.8.0-cp38-abi3-musllinux_1_2_x86_64.whl", hash = "sha256:1ebaf248c9bef8bb0c9d1d8d71db1fdf0cac14f922cc7a936a81adbf12eb5f01", size = 4500689, upload-time = "2026-10-30T10:04:28.394Z" },
     { url = "https://files.pythonhosted.org/packages/97/4d/2c76a992b370ff77d0b5219275779f8c9a7dabb8ee649deb265dfed84d0f/hf_xet-1.8.0-cp38-abi3-win_amd64.whl", hash = "sha256:92188598dedc1e1f5609bd718d4db8687a6c89915553912571e2f587892eecec", size = 3911559, upload-time = "2026-10-30T10:04:30.165Z" },
     { url = "https://files.pythonhosted.org/packages/87/91/fdb1454a43eff8011047d176ada2f0fb4926cf3d74b87357ff35793f6d98/hf_xet-1.8.0-cp38-abi3-win_arm64.whl", hash = "sha256:42b66fdc688eaa4ff3eb77dc9275e5a0f1258ecc9fdd083ddaf43bb49bec925b", size = 3738458, upload-time = "2026-10-30T10:04:31.882Z" },
+]
+
+[[package]]
+name = "html2text"
+version = "2025.4.15"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/f8/27/e158d86ba1e82967cc2f790b0cb02030d4a8bef58e0c79a8590e9678107f/html2text-2025.4.15.tar.gz", hash = "sha256:948a645f8f0bc3abe7fd587019a2197a12436cd73d0d4908af95bfc8da337588", size = 64316, upload-time = "2025-04-15T04:02:30.045Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/1d/84/1a0f9555fd5f2b1c924ff932d99b40a0f8a6b12f6dd625e2a47f415b00ea/html2text-2025.4.15-py3-none-any.whl", hash = "sha256:00569167ffdab3d7767a4cdf589b7f57e777a5ed28d12907d8c58769ec734acc", size = 34656, upload-time = "2025-04-15T04:02:28.44Z" },
 ]
 
 [[package]]

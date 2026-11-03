@@ -16,20 +16,20 @@ dependencies = [
     "typer>=0.12",
 ]
 
-[project.optional-dependencies]
-# The guidance-RAG stack pulls in torch via sentence-transformers; optional so the default
-# reviewer run stays a small, fast install. Cited drafts need: uv sync --extra rag
-rag = [
-    "lancedb>=0.15",
-    "sentence-transformers>=3.0",
-]
-
 [dependency-groups]
 dev = [
     "pytest>=8.0",
     "respx>=0.21",
     "freezegun>=1.5",
     "ruff>=0.6",
+    "html2text>=2024.2.26",  # scripts/fetch_guidance.py (corpus reproduction, dev-time only)
+]
+# The guidance-RAG stack (pulls in torch via sentence-transformers). Installed by default so
+# a plain `uv sync` gives a fully working demo; CI opts out with --no-group rag and the RAG
+# tests skip themselves when lancedb is absent.
+rag = [
+    "lancedb>=0.15",
+    "sentence-transformers>=3.0",
 ]
 
 [project.scripts]
@@ -51,3 +51,6 @@ addopts = "-m 'not live'"
 [tool.ruff]
 line-length = 100
 src = ["src", "tests"]
+
+[tool.uv]
+default-groups = ["dev", "rag"]

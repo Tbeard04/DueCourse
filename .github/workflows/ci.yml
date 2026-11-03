@@ -14,8 +14,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: astral-sh/setup-uv@v5
-      - name: Install dependencies
-        run: uv sync --dev
+      - name: Install dependencies (slim — RAG tests skip without lancedb)
+        run: uv sync --no-group rag
+      - name: Keep uv run from re-syncing the full group set
+        run: echo "UV_NO_SYNC=1" >> "$GITHUB_ENV"
       - name: Lint
         run: uv run ruff check .
       - name: Format check

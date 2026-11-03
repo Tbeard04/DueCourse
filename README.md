@@ -28,7 +28,7 @@ only drafts prose around injected, cited facts.
 
 ```bash
 cd 02-solution
-uv sync                       # add --extra rag for the guidance-citation features
+uv sync                       # full install incl. local embeddings (CI runs slim: --no-group rag)
 cp .env.example .env          # add your (free) Companies House API key
 uv run duecourse sync
 uv run duecourse triage

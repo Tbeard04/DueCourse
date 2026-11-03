@@ -39,9 +39,22 @@ with st.sidebar:
     st.header("Ask about a deadline")
     question = st.text_input("e.g. what happens if accounts are a month late?")
     if question:
-        # TODO(evening 4): rag.search(question) + LLM answer restricted to retrieved chunks,
-        # citations rendered as links.
-        st.info("Guidance Q&A arrives with the RAG index (evening 4).")
+        from duecourse import rag
+
+        try:
+            with st.spinner("Checking the guidance…"):
+                answer_text, sources = rag.answer(question)
+        except rag.GuidanceUnavailable as exc:
+            st.info(str(exc))
+        else:
+            if answer_text:
+                st.markdown(answer_text)
+            else:
+                st.caption("No LLM configured — showing the most relevant guidance extracts.")
+            for chunk in sources:
+                with st.expander(chunk.source_title):
+                    st.markdown(chunk.text[:1200])
+                    st.markdown(f"[Source]({chunk.source_url})")
 
 # --- the queue ---------------------------------------------------------------
 if not pending:
