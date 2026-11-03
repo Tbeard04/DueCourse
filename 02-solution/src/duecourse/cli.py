@@ -73,9 +73,14 @@ def triage() -> None:
 def draft() -> None:
     """Draft a chasing email for every overdue / due-soon item into the review queue."""
     from . import agent
+    from .companies_house import CompaniesHouseClient
     from .models import TriageStatus
 
     store = Store(get_settings().db_path)
+    try:
+        ch = CompaniesHouseClient()
+    except ValueError:
+        ch = None  # drafting still works without filing-history context
     try:
         urgent = [
             item
@@ -86,10 +91,12 @@ def draft() -> None:
         for item in urgent:
             client = store.client(item.deadline.company_number)
             if client is not None:
-                store.save_draft(None, agent.draft_for(item, client))
+                store.save_draft(None, agent.draft_for(item, client, store=store, ch=ch))
                 count += 1
         typer.echo(f"{count} drafts queued for review. Nothing has been sent.")
     finally:
+        if ch is not None:
+            ch.close()
         store.close()
 
 

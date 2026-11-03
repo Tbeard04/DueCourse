@@ -19,7 +19,9 @@ SCHEMA_PATH = Path(__file__).resolve().parents[2] / "schema.sql"
 class Store:
     def __init__(self, db_path: Path):
         db_path.parent.mkdir(parents=True, exist_ok=True)
-        self._db = sqlite3.connect(db_path)
+        # check_same_thread=False: pydantic-ai runs sync tools/instructions in worker threads,
+        # and Streamlit reruns on fresh threads. Access is sequential by design; WAL mode on.
+        self._db = sqlite3.connect(db_path, check_same_thread=False)
         self._db.row_factory = sqlite3.Row
         self._db.execute("PRAGMA journal_mode=WAL")
         self._db.executescript(SCHEMA_PATH.read_text(encoding="utf-8"))

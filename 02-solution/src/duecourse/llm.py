@@ -23,17 +23,21 @@ def _ollama_reachable(base_url: str) -> bool:
 
 
 def get_model(purpose: Literal["draft", "judge"] = "draft"):
-    """Return a Pydantic AI model (or model name string), or None when no provider exists.
+    """Return a Pydantic AI model, or None when no provider exists.
 
-    Pydantic AI accepts 'anthropic:<model-id>' strings directly; the Ollama path goes through
-    its OpenAI-compatible endpoint.
+    The API key comes from .env via Settings (not ambient os.environ), so providers are
+    constructed explicitly rather than through pydantic-ai's env-var discovery.
     """
     settings = get_settings()
     if settings.anthropic_api_key:
+        from pydantic_ai.models.anthropic import AnthropicModel
+        from pydantic_ai.providers.anthropic import AnthropicProvider
+
         model_id = settings.draft_model if purpose == "draft" else settings.judge_model
-        return f"anthropic:{model_id}"
+        return AnthropicModel(
+            model_id, provider=AnthropicProvider(api_key=settings.anthropic_api_key)
+        )
     if _ollama_reachable(settings.ollama_base_url):
-        # TODO(evening 3): verify against the installed pydantic-ai version.
         from pydantic_ai.models.openai import OpenAIChatModel
         from pydantic_ai.providers.ollama import OllamaProvider
 
@@ -48,6 +52,4 @@ def describe_model(model) -> str:
     """Human-readable provenance string for model_used."""
     if model is None:
         return "template"
-    if isinstance(model, str):
-        return model
-    return f"ollama:{OLLAMA_DRAFT_MODEL}"
+    return getattr(model, "model_name", None) or str(model)

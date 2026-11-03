@@ -36,7 +36,7 @@ def run_pipeline(as_of: date | None = None) -> str:
         for item in urgent:
             client = store.client(item.deadline.company_number)
             if client is not None:
-                store.save_draft(run_id, agent.draft_for(item, client))
+                store.save_draft(run_id, agent.draft_for(item, client, store=store, ch=ch))
 
         report = build_digest(store, as_of)
         out_dir = settings.duecourse_data_dir / "digests"
