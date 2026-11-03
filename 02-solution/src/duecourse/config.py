@@ -13,7 +13,9 @@ class Settings(BaseSettings):
     ollama_base_url: str = "http://localhost:11434"
     duecourse_data_dir: Path = Path("data")
     duecourse_api_token: str = ""
-    draft_model: str = "claude-opus-5-5"
+    # Default chosen by the model-selection eval (03-evals/model-selection.md): best measured
+    # rubric pass-rate at 2x less than Opus — the config follows the evidence.
+    draft_model: str = "claude-sonnet-5-5"
     judge_model: str = "claude-sonnet-5-5"
 
     @property

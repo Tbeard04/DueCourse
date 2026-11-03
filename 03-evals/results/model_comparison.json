@@ -1,0 +1,1064 @@
+{
+  "ran_at": "2026-11-03T19:56:46.065232+00:00",
+  "n_items": 20,
+  "judge_model": "claude-sonnet-5-5",
+  "weekly_drafts_assumption": 8,
+  "results": [
+    {
+      "model": "claude-opus-5-5",
+      "drafts": 20,
+      "failures": 0,
+      "rubric_pass_rate": 0.35,
+      "citation_validity": 1.0,
+      "median_latency_s": 11.59,
+      "mean_cost_per_draft_usd": 0.04007,
+      "cost_per_weekly_run_usd": 0.3205,
+      "rows": [
+        {
+          "company_number": "11697272",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": false,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 3,
+          "citations_valid": 3,
+          "input_tokens": 7547,
+          "output_tokens": 1983,
+          "subject": "Urgent: PEARSON D ELECTRICAL LIMITED annual accounts are overdue at Companies House"
+        },
+        {
+          "company_number": "14326477",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 6918,
+          "output_tokens": 819,
+          "subject": "Overdue: NURA POINT LIMITED confirmation statement (due 2026-09-13)"
+        },
+        {
+          "company_number": "11699448",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 3581,
+          "output_tokens": 776,
+          "subject": "Action needed: C & L Electrical Solutions Ltd confirmation statement due 6 November 2026"
+        },
+        {
+          "company_number": "11697272",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 7023,
+          "output_tokens": 813,
+          "subject": "Action needed: PEARSON D ELECTRICAL LIMITED confirmation statement due 9 November 2026"
+        },
+        {
+          "company_number": "15256527",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 7007,
+          "output_tokens": 817,
+          "subject": "Action needed: C & I CLEANING SERVICES LTD confirmation statement due 2026-11-15 (12 days)"
+        },
+        {
+          "company_number": "SC577162",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": false,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 6636,
+          "output_tokens": 781,
+          "subject": "YAMATO LTD (SC577162) – confirmation statement due 2026-11-16"
+        },
+        {
+          "company_number": "15296693",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 3,
+          "citations_valid": 3,
+          "input_tokens": 6824,
+          "output_tokens": 993,
+          "subject": "TAILOR CARE LTD: confirmation statement due 3 December 2026"
+        },
+        {
+          "company_number": "11704747",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": false,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 3580,
+          "output_tokens": 874,
+          "subject": "ELEKTROWE SOLUTIONS LIMITED (11704747): confirmation statement due 2026-12-13"
+        },
+        {
+          "company_number": "11676204",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": false,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 6702,
+          "output_tokens": 872,
+          "subject": "HS SECURITY CONTRACTS LIMITED: confirmation statement due 2026-12-13"
+        },
+        {
+          "company_number": "11714493",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": false,
+            "appropriate_urgency": true
+          },
+          "citations_total": 4,
+          "citations_valid": 4,
+          "input_tokens": 3787,
+          "output_tokens": 1110,
+          "subject": "GOODFELLOW ELECTRICAL SOLUTIONS LTD (11714493): confirmation statement due 20 December 2026"
+        },
+        {
+          "company_number": "11722065",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": false,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 3578,
+          "output_tokens": 862,
+          "subject": "AMPERE ELECTRICAL SERVICES LIMITED (11722065): confirmation statement due 2026-12-24"
+        },
+        {
+          "company_number": "10908101",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": false,
+            "appropriate_urgency": false
+          },
+          "citations_total": 3,
+          "citations_valid": 3,
+          "input_tokens": 7150,
+          "output_tokens": 972,
+          "subject": "A&S CORPORATION LIMITED: confirmation statement due 2026-12-29"
+        },
+        {
+          "company_number": "12506395",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": false,
+            "no_invented_details": false,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 3880,
+          "output_tokens": 836,
+          "subject": "HARIAN LTD (12506395): annual accounts due 29 December 2026"
+        },
+        {
+          "company_number": "SC796032",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": false,
+            "no_invented_details": false,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 3921,
+          "output_tokens": 1042,
+          "subject": "NEW HORIZON CLEANING SERVICES LTD (SC796032): annual accounts due 2026-12-31"
+        },
+        {
+          "company_number": "09424816",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": false,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 3885,
+          "output_tokens": 768,
+          "subject": "PRODUCT 101 LTD (09424816): annual accounts due 31 December 2026"
+        },
+        {
+          "company_number": "15363542",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": false,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 3889,
+          "output_tokens": 695,
+          "subject": "TITANS CLEANERS LIMITED: annual accounts due by 31 December 2026"
+        },
+        {
+          "company_number": "09475667",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 3905,
+          "output_tokens": 860,
+          "subject": "VANTAGEPOINT CONSULTANCY LTD (09475667): annual accounts due 31 December 2026"
+        },
+        {
+          "company_number": "15363542",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": false,
+            "appropriate_urgency": true
+          },
+          "citations_total": 3,
+          "citations_valid": 3,
+          "input_tokens": 6655,
+          "output_tokens": 959,
+          "subject": "TITANS CLEANERS LIMITED (15363542): confirmation statement due 2 January 2027"
+        },
+        {
+          "company_number": "15373697",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": false,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 6826,
+          "output_tokens": 958,
+          "subject": "DRAFT FOR REVIEW: DYNASTY SERVICES LTD (15373697) – confirmation statement due 2027-01-10"
+        },
+        {
+          "company_number": "11758074",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 3,
+          "citations_valid": 3,
+          "input_tokens": 3578,
+          "output_tokens": 902,
+          "subject": "KLF Mechanical & Electrical Ltd: confirmation statement due 22 January 2027"
+        }
+      ]
+    },
+    {
+      "model": "claude-sonnet-5-5",
+      "drafts": 20,
+      "failures": 0,
+      "rubric_pass_rate": 0.5,
+      "citation_validity": 1.0,
+      "median_latency_s": 9.52,
+      "mean_cost_per_draft_usd": 0.02435,
+      "cost_per_weekly_run_usd": 0.1948,
+      "rows": [
+        {
+          "company_number": "11697272",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": false,
+            "no_invented_details": false,
+            "appropriate_urgency": true
+          },
+          "citations_total": 3,
+          "citations_valid": 3,
+          "input_tokens": 7900,
+          "output_tokens": 1157,
+          "subject": "Overdue: annual accounts for PEARSON D ELECTRICAL LIMITED (company 11697272)"
+        },
+        {
+          "company_number": "14326477",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": false,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 3,
+          "citations_valid": 3,
+          "input_tokens": 7516,
+          "output_tokens": 936,
+          "subject": "Overdue: NURA POINT LIMITED confirmation statement"
+        },
+        {
+          "company_number": "11699448",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 7067,
+          "output_tokens": 795,
+          "subject": "Confirmation statement for C & L Electrical Solutions Ltd – due in 3 days (6 November 2026)"
+        },
+        {
+          "company_number": "11697272",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 7218,
+          "output_tokens": 759,
+          "subject": "Action needed: confirmation statement for PEARSON D ELECTRICAL LIMITED due 9 November 2026"
+        },
+        {
+          "company_number": "15256527",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 7024,
+          "output_tokens": 772,
+          "subject": "Confirmation statement for C & I Cleaning Services Ltd – due 15 November 2026"
+        },
+        {
+          "company_number": "SC577162",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 9910,
+          "output_tokens": 785,
+          "subject": "YAMATO LTD – confirmation statement due 16 November 2026"
+        },
+        {
+          "company_number": "15296693",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 15314,
+          "output_tokens": 986,
+          "subject": "TAILOR CARE LTD – confirmation statement due 3 December 2026"
+        },
+        {
+          "company_number": "11704747",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": false,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 6836,
+          "output_tokens": 900,
+          "subject": "Confirmation statement for ELEKTROWE SOLUTIONS LIMITED – due 13 December 2026"
+        },
+        {
+          "company_number": "11676204",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": false,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 14732,
+          "output_tokens": 894,
+          "subject": "HS SECURITY CONTRACTS LIMITED – confirmation statement due 13 December 2026"
+        },
+        {
+          "company_number": "11714493",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 7160,
+          "output_tokens": 1040,
+          "subject": "GOODFELLOW ELECTRICAL SOLUTIONS LTD – confirmation statement due 20 December 2026"
+        },
+        {
+          "company_number": "11722065",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 3,
+          "citations_valid": 3,
+          "input_tokens": 6831,
+          "output_tokens": 962,
+          "subject": "AMPERE ELECTRICAL SERVICES LIMITED – confirmation statement due 24 December 2026"
+        },
+        {
+          "company_number": "10908101",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 10452,
+          "output_tokens": 842,
+          "subject": "A&S Corporation Limited – confirmation statement due 29 December 2026"
+        },
+        {
+          "company_number": "12506395",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": false,
+            "appropriate_urgency": true
+          },
+          "citations_total": 1,
+          "citations_valid": 1,
+          "input_tokens": 3880,
+          "output_tokens": 810,
+          "subject": "HARIAN LTD – annual accounts due 29 December 2026"
+        },
+        {
+          "company_number": "SC796032",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": false,
+            "no_invented_details": false,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 3921,
+          "output_tokens": 965,
+          "subject": "New Horizon Cleaning Services Ltd – annual accounts due 31 December 2026"
+        },
+        {
+          "company_number": "09424816",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": false,
+            "no_invented_details": true,
+            "appropriate_urgency": false
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 3885,
+          "output_tokens": 911,
+          "subject": "PRODUCT 101 LTD – annual accounts due 31 December 2026"
+        },
+        {
+          "company_number": "15363542",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": false,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 3889,
+          "output_tokens": 895,
+          "subject": "TITANS CLEANERS LIMITED – annual accounts due 31 December 2026"
+        },
+        {
+          "company_number": "09475667",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": false,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 1,
+          "citations_valid": 1,
+          "input_tokens": 3905,
+          "output_tokens": 825,
+          "subject": "VANTAGEPOINT CONSULTANCY LTD: annual accounts due 31 December 2026"
+        },
+        {
+          "company_number": "15363542",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 6789,
+          "output_tokens": 889,
+          "subject": "TITANS CLEANERS LIMITED – confirmation statement due 2027-01-02"
+        },
+        {
+          "company_number": "15373697",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": false,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 6803,
+          "output_tokens": 856,
+          "subject": "DYNASTY SERVICES LTD – confirmation statement due 10 January 2027"
+        },
+        {
+          "company_number": "11758074",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 4,
+          "citations_valid": 4,
+          "input_tokens": 11081,
+          "output_tokens": 1291,
+          "subject": "KLF Mechanical & Electrical Ltd: confirmation statement due 22 January 2027"
+        }
+      ]
+    },
+    {
+      "model": "claude-haiku-5-5",
+      "drafts": 20,
+      "failures": 0,
+      "rubric_pass_rate": 0.45,
+      "citation_validity": 1.0,
+      "median_latency_s": 9.82,
+      "mean_cost_per_draft_usd": 0.0013,
+      "cost_per_weekly_run_usd": 0.0104,
+      "rows": [
+        {
+          "company_number": "11697272",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 5910,
+          "output_tokens": 1360,
+          "subject": "Overdue annual accounts for PEARSON D ELECTRICAL LIMITED (11697272)"
+        },
+        {
+          "company_number": "14326477",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 1,
+          "citations_valid": 1,
+          "input_tokens": 4064,
+          "output_tokens": 1484,
+          "subject": "Overdue confirmation statement for NURA POINT LIMITED (company 14326477)"
+        },
+        {
+          "company_number": "11699448",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": false,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 4010,
+          "output_tokens": 1081,
+          "subject": "Urgent: confirmation statement for C & L ELECTRICAL SOLUTIONS LTD due in 3 days (6 November 2026)"
+        },
+        {
+          "company_number": "11697272",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 0,
+          "citations_valid": 0,
+          "input_tokens": 5417,
+          "output_tokens": 857,
+          "subject": "Confirmation statement for PEARSON D ELECTRICAL LIMITED due in 6 days"
+        },
+        {
+          "company_number": "15256527",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": false,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 1,
+          "citations_valid": 1,
+          "input_tokens": 9947,
+          "output_tokens": 942,
+          "subject": "Confirmation statement due 15 November 2026 - C & I Cleaning Services Ltd"
+        },
+        {
+          "company_number": "SC577162",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": false,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 1,
+          "citations_valid": 1,
+          "input_tokens": 7686,
+          "output_tokens": 1333,
+          "subject": "Confirmation statement for YAMATO LTD (SC577162) due 16 November 2026"
+        },
+        {
+          "company_number": "15296693",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 0,
+          "citations_valid": 0,
+          "input_tokens": 5403,
+          "output_tokens": 921,
+          "subject": "Confirmation statement due 3 December 2026 - please confirm company details"
+        },
+        {
+          "company_number": "11704747",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": false,
+            "appropriate_urgency": true
+          },
+          "citations_total": 3,
+          "citations_valid": 3,
+          "input_tokens": 3762,
+          "output_tokens": 1164,
+          "subject": "ELEKTROWE SOLUTIONS LIMITED - confirmation statement due 13 December 2026"
+        },
+        {
+          "company_number": "11676204",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": false,
+            "appropriate_urgency": true
+          },
+          "citations_total": 1,
+          "citations_valid": 1,
+          "input_tokens": 6265,
+          "output_tokens": 910,
+          "subject": "HS Security Contracts Limited: confirmation statement due 13 December 2026"
+        },
+        {
+          "company_number": "11714493",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 1,
+          "citations_valid": 1,
+          "input_tokens": 7490,
+          "output_tokens": 2067,
+          "subject": "GOODFELLOW ELECTRICAL SOLUTIONS LTD: confirmation statement due 20 December 2026"
+        },
+        {
+          "company_number": "11722065",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 0,
+          "citations_valid": 0,
+          "input_tokens": 8474,
+          "output_tokens": 1375,
+          "subject": "Confirmation statement for Ampere Electrical Services Limited due 24 December 2026"
+        },
+        {
+          "company_number": "10908101",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 0,
+          "citations_valid": 0,
+          "input_tokens": 8738,
+          "output_tokens": 894,
+          "subject": "A&S CORPORATION LIMITED: confirmation statement due 29 December 2026"
+        },
+        {
+          "company_number": "12506395",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": false,
+            "appropriate_urgency": true
+          },
+          "citations_total": 1,
+          "citations_valid": 1,
+          "input_tokens": 5745,
+          "output_tokens": 998,
+          "subject": "HARIAN LTD: annual accounts due 29 December 2026"
+        },
+        {
+          "company_number": "SC796032",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": false,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 0,
+          "citations_valid": 0,
+          "input_tokens": 6004,
+          "output_tokens": 1288,
+          "subject": "Annual accounts due 31 December 2026 - New Horizon Cleaning Services Ltd (SC796032)"
+        },
+        {
+          "company_number": "09424816",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": false,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 2,
+          "citations_valid": 2,
+          "input_tokens": 7910,
+          "output_tokens": 2607,
+          "subject": "PRODUCT 101 LTD: annual accounts due 31 December 2026"
+        },
+        {
+          "company_number": "15363542",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": false,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 1,
+          "citations_valid": 1,
+          "input_tokens": 5901,
+          "output_tokens": 1152,
+          "subject": "Annual accounts due 31 December 2026 - TITANS CLEANERS LIMITED (15363542)"
+        },
+        {
+          "company_number": "09475667",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": false,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 0,
+          "citations_valid": 0,
+          "input_tokens": 5894,
+          "output_tokens": 828,
+          "subject": "Annual accounts for VANTAGEPOINT CONSULTANCY LTD (09475667): reminder of the filing deadline"
+        },
+        {
+          "company_number": "15363542",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 3,
+          "citations_valid": 3,
+          "input_tokens": 7251,
+          "output_tokens": 1243,
+          "subject": "TITANS CLEANERS LIMITED: confirmation statement due 2 January 2027"
+        },
+        {
+          "company_number": "15373697",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": false,
+            "appropriate_urgency": true
+          },
+          "citations_total": 0,
+          "citations_valid": 0,
+          "input_tokens": 8622,
+          "output_tokens": 1503,
+          "subject": "Confirmation statement for DYNASTY SERVICES LTD due 10 January 2027"
+        },
+        {
+          "company_number": "11758074",
+          "passed_5_of_5": true,
+          "criteria": {
+            "correct_facts": true,
+            "correct_tone": true,
+            "one_clear_ask": true,
+            "no_invented_details": true,
+            "appropriate_urgency": true
+          },
+          "citations_total": 1,
+          "citations_valid": 1,
+          "input_tokens": 7986,
+          "output_tokens": 1401,
+          "subject": "KLF MECHANICAL & ELECTRICAL LTD: confirmation statement due 22 January 2027"
+        }
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "drafts": 3,
+      "failures": 17,
+      "rubric_pass_rate": 0.0,
+      "citation_validity": null,
+      "median_latency_s": 7.72,
+      "mean_cost_per_draft_usd": 0.0,
+      "cost_per_weekly_run_usd": 0.0,
+      "rows": [
+        {
+          "company_number": "11697272",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": false,
+            "correct_tone": true,
+            "one_clear_ask": false,
+            "no_invented_details": false,
+            "appropriate_urgency": false
+          },
+          "citations_total": 0,
+          "citations_valid": 0,
+          "input_tokens": 2354,
+          "output_tokens": 484,
+          "subject": "Confirmation Statement Overdue for PEARSON D ELECTRICAL LIMITED"
+        },
+        {
+          "company_number": "SC577162",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": false,
+            "correct_tone": false,
+            "one_clear_ask": true,
+            "no_invented_details": false,
+            "appropriate_urgency": false
+          },
+          "citations_total": 0,
+          "citations_valid": 0,
+          "input_tokens": 9888,
+          "output_tokens": 585,
+          "subject": "Confirmation Statement Due "
+        },
+        {
+          "company_number": "15363542",
+          "passed_5_of_5": false,
+          "criteria": {
+            "correct_facts": false,
+            "correct_tone": false,
+            "one_clear_ask": true,
+            "no_invented_details": false,
+            "appropriate_urgency": false
+          },
+          "citations_total": 0,
+          "citations_valid": 0,
+          "input_tokens": 5189,
+          "output_tokens": 541,
+          "subject": "Reminder: Upcoming Confirmation Statement Deadline for TITANS CLEANERS LIMITED"
+        }
+      ]
+    }
+  ]
+}

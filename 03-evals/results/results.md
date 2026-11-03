@@ -39,8 +39,19 @@ candidate in the model comparison below (every quote checked verbatim against th
 
 ## Model comparison
 
-<!-- TODO: table from model_comparison.json once the run completes -->
-See [model-selection.md](../model-selection.md) for the recommendation memo.
+20 identical drafting tasks per candidate, constant judge, measured token costs:
+
+| Model | Rubric 5/5 | Citation validity | $/weekly run | Median latency |
+| --- | --- | --- | --- | --- |
+| claude-opus-5-5 | 35% | 100% (47/47) | $0.32 | 11.6s |
+| claude-sonnet-5-5 | 50% | 100% (43/43) | $0.19 | 9.5s |
+| claude-haiku-5-5 | 45% | 100% (20/20) | $0.01 | 9.8s |
+| llama3.1:8b (local) | 0% (completed 3/20) | n/a | £0 | 7.7s |
+
+**Citation validity across all Anthropic drafts: 110/110 = 100%.** The recommendation
+(claude-sonnet-5-5, now the shipped default) and the caveats — n=20 noise, judge/candidate
+family overlap, the local-model structured-output failure — are in
+[model-selection.md](../model-selection.md).
 
 ## Caveats, stated plainly
 
