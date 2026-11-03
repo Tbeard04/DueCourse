@@ -35,6 +35,19 @@ class Store:
         )
         self._db.commit()
 
+    def prune_clients(self, keep: list[str]) -> int:
+        """Remove clients no longer in the portfolio; returns how many were removed.
+
+        portfolio.json is the source of truth — sync upserts its entries, then prunes the rest.
+        Their past drafts and decisions stay: the audit trail is never deleted.
+        """
+        placeholders = ",".join("?" for _ in keep) or "''"
+        cursor = self._db.execute(
+            f"DELETE FROM clients WHERE company_number NOT IN ({placeholders})", keep
+        )
+        self._db.commit()
+        return cursor.rowcount
+
     def clients(self) -> list[ClientCompany]:
         rows = self._db.execute("SELECT * FROM clients ORDER BY name").fetchall()
         return [ClientCompany(**dict(row)) for row in rows]

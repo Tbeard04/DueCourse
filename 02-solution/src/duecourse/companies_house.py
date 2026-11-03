@@ -38,6 +38,8 @@ class CompanyProfile(BaseModel):
 
     company_number: str
     company_name: str
+    company_status: str = ""
+    company_type: str = ""
     accounts_next_due: date | None = None
     accounts_period_end: date | None = None
     accounts_overdue: bool = False
@@ -52,6 +54,8 @@ class CompanyProfile(BaseModel):
         return cls(
             company_number=raw["company_number"],
             company_name=raw.get("company_name", ""),
+            company_status=raw.get("company_status", ""),
+            company_type=raw.get("type", ""),
             accounts_next_due=accounts.get("next_due"),
             accounts_period_end=next_accounts.get("period_end_on"),
             accounts_overdue=bool(accounts.get("overdue", False)),
@@ -86,6 +90,25 @@ class CompaniesHouseClient:
         self.cache_dir.mkdir(parents=True, exist_ok=True)
         payload = {"fetched_at": datetime.now(UTC).isoformat(), "data": raw}
         (self.cache_dir / f"{name}.json").write_text(json.dumps(payload, indent=2))
+
+    def search_advanced(
+        self,
+        *,
+        sic_codes: str | None = None,
+        incorporated_from: str | None = None,
+        incorporated_to: str | None = None,
+        company_status: str = "active",
+        size: int = 100,
+    ) -> list[dict]:
+        """GET /advanced-search/companies — raw result items (used by the portfolio builder)."""
+        params: dict = {"company_status": company_status, "size": size}
+        if sic_codes:
+            params["sic_codes"] = sic_codes
+        if incorporated_from:
+            params["incorporated_from"] = incorporated_from
+        if incorporated_to:
+            params["incorporated_to"] = incorporated_to
+        return self._get("/advanced-search/companies", params=params).get("items", [])
 
     def get_company_profile(self, company_number: str) -> CompanyProfile:
         raw = self._get(f"/company/{company_number}")

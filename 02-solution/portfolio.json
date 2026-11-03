@@ -1,0 +1,422 @@
+[
+  {
+    "company_number": "09553253",
+    "name": "26 MILE CONSULTANCY LTD",
+    "contact_name": "Ellie Patel",
+    "contact_email": "ellie.patel@example.test",
+    "notes": "director travels a lot; email the bookkeeper too"
+  },
+  {
+    "company_number": "11655411",
+    "name": "A&H ELECTRICS LTD",
+    "contact_name": "Sofia Barnes",
+    "contact_email": "sofia.barnes@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "10908101",
+    "name": "A&S CORPORATION LIMITED",
+    "contact_name": "Megan Murray",
+    "contact_email": "megan.murray@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "10963784",
+    "name": "ABABEEL RESTAURANT LTD",
+    "contact_name": "Hannah Hughes",
+    "contact_email": "hannah.hughes@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "12459840",
+    "name": "ALAND K BARBER LIMITED",
+    "contact_name": "James Griffiths",
+    "contact_email": "james.griffiths@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "11722065",
+    "name": "AMPERE ELECTRICAL SERVICES LIMITED",
+    "contact_name": "Marcus Ahmed",
+    "contact_email": "marcus.ahmed@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "11000845",
+    "name": "ANNYLONDON ENTERPRISE LIMITED",
+    "contact_name": "Megan Patel",
+    "contact_email": "megan.patel@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "13413013",
+    "name": "BANDING & STRAPPING LTD",
+    "contact_name": "Lucy Doyle",
+    "contact_email": "lucy.doyle@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "11033552",
+    "name": "BAYHASME LIMITED",
+    "contact_name": "Sofia Hassan",
+    "contact_email": "sofia.hassan@example.test",
+    "notes": "sends records as paper bundles — allow extra time"
+  },
+  {
+    "company_number": "15256527",
+    "name": "C & I CLEANING SERVICES LTD",
+    "contact_name": "Marcus Patel",
+    "contact_email": "marcus.patel@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "11699448",
+    "name": "C & L ELECTRICAL SOLUTIONS LTD",
+    "contact_name": "Hannah Doyle",
+    "contact_email": "hannah.doyle@example.test",
+    "notes": "always late with records in January"
+  },
+  {
+    "company_number": "13450658",
+    "name": "CRIMPIT GROUP LTD",
+    "contact_name": "Hannah Kelly",
+    "contact_email": "hannah.kelly@example.test",
+    "notes": "always late with records in January"
+  },
+  {
+    "company_number": "11040539",
+    "name": "DAMBA CONSULTANTS LTD",
+    "contact_name": "James Griffiths",
+    "contact_email": "james.griffiths@example.test",
+    "notes": "sends records as paper bundles — allow extra time"
+  },
+  {
+    "company_number": "13472555",
+    "name": "DANCER GROUP LIMITED",
+    "contact_name": "Megan Johnson",
+    "contact_email": "megan.johnson@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "14361678",
+    "name": "DRD PARTNERS LTD",
+    "contact_name": "Tom Rossi",
+    "contact_email": "tom.rossi@example.test",
+    "notes": "sends records as paper bundles — allow extra time"
+  },
+  {
+    "company_number": "15373697",
+    "name": "DYNASTY SERVICES LTD",
+    "contact_name": "Sofia Hassan",
+    "contact_email": "sofia.hassan@example.test",
+    "notes": "new client this year — first filing cycle with us"
+  },
+  {
+    "company_number": "13503806",
+    "name": "ECOM GRIND LTD",
+    "contact_name": "Owen Hassan",
+    "contact_email": "owen.hassan@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "11704747",
+    "name": "ELEKTROWE SOLUTIONS LIMITED",
+    "contact_name": "James Rossi",
+    "contact_email": "james.rossi@example.test",
+    "notes": "new client this year — first filing cycle with us"
+  },
+  {
+    "company_number": "13440401",
+    "name": "FABULOUS LOOKS UK LTD",
+    "contact_name": "Marcus Kelly",
+    "contact_email": "marcus.kelly@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "15452348",
+    "name": "FORBURY FM LTD",
+    "contact_name": "Nadia Murray",
+    "contact_email": "nadia.murray@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "11714493",
+    "name": "GOODFELLOW ELECTRICAL SOLUTIONS LTD",
+    "contact_name": "Kwame Mensah",
+    "contact_email": "kwame.mensah@example.test",
+    "notes": "always late with records in January"
+  },
+  {
+    "company_number": "13495530",
+    "name": "GREEN TRANSPORTATION LTD",
+    "contact_name": "Marcus Hassan",
+    "contact_email": "marcus.hassan@example.test",
+    "notes": "director travels a lot; email the bookkeeper too"
+  },
+  {
+    "company_number": "12506395",
+    "name": "HARIAN LTD",
+    "contact_name": "Hannah Doyle",
+    "contact_email": "hannah.doyle@example.test",
+    "notes": "new client this year — first filing cycle with us"
+  },
+  {
+    "company_number": "11676204",
+    "name": "HS SECURITY CONTRACTS LIMITED",
+    "contact_name": "Omar Evans",
+    "contact_email": "omar.evans@example.test",
+    "notes": "new client this year — first filing cycle with us"
+  },
+  {
+    "company_number": "14276671",
+    "name": "KLASS HOLDINGS LTD",
+    "contact_name": "Lucy Rossi",
+    "contact_email": "lucy.rossi@example.test",
+    "notes": "sends records as paper bundles — allow extra time"
+  },
+  {
+    "company_number": "11758074",
+    "name": "KLF MECHANICAL & ELECTRICAL LTD",
+    "contact_name": "Omar Nowak",
+    "contact_email": "omar.nowak@example.test",
+    "notes": "always late with records in January"
+  },
+  {
+    "company_number": "10208355",
+    "name": "KUMA CONSULTING LIMITED",
+    "contact_name": "Amara Sharma",
+    "contact_email": "amara.sharma@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "10166276",
+    "name": "LAGRAVE FIDUCIARIES LIMITED",
+    "contact_name": "Tom Evans",
+    "contact_email": "tom.evans@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "13381650",
+    "name": "LET'S GIFT SOMETHING LTD",
+    "contact_name": "Sofia Evans",
+    "contact_email": "sofia.evans@example.test",
+    "notes": "new client this year — first filing cycle with us"
+  },
+  {
+    "company_number": "13447570",
+    "name": "LOKY FASHION LTD",
+    "contact_name": "Owen Price",
+    "contact_email": "owen.price@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "13403183",
+    "name": "LONGTOO LIMITED",
+    "contact_name": "Ravi Nowak",
+    "contact_email": "ravi.nowak@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "14347513",
+    "name": "MAK SMILE SERVICES LTD",
+    "contact_name": "Omar Johnson",
+    "contact_email": "omar.johnson@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "13494471",
+    "name": "MARY & JAYNE LTD",
+    "contact_name": "Callum Mensah",
+    "contact_email": "callum.mensah@example.test",
+    "notes": "prefers a phone call before month end"
+  },
+  {
+    "company_number": "10174268",
+    "name": "MCINERNEY AUDIT & PACKAGING SOLUTIONS LIMITED",
+    "contact_name": "Nadia Nowak",
+    "contact_email": "nadia.nowak@example.test",
+    "notes": "sends records as paper bundles — allow extra time"
+  },
+  {
+    "company_number": "13469376",
+    "name": "MELEYE LONDON LTD",
+    "contact_name": "Omar Williams",
+    "contact_email": "omar.williams@example.test",
+    "notes": "sends records as paper bundles — allow extra time"
+  },
+  {
+    "company_number": "SC796032",
+    "name": "NEW HORIZON CLEANING SERVICES LTD",
+    "contact_name": "Omar Doyle",
+    "contact_email": "omar.doyle@example.test",
+    "notes": "director travels a lot; email the bookkeeper too"
+  },
+  {
+    "company_number": "13412105",
+    "name": "NOI E-COM LTD",
+    "contact_name": "Ravi Doyle",
+    "contact_email": "ravi.doyle@example.test",
+    "notes": "sends records as paper bundles — allow extra time"
+  },
+  {
+    "company_number": "14326477",
+    "name": "NURA POINT LIMITED",
+    "contact_name": "Kwame Nowak",
+    "contact_email": "kwame.nowak@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "09528299",
+    "name": "OXLEY BARNES LIMITED",
+    "contact_name": "Marcus Patel",
+    "contact_email": "marcus.patel@example.test",
+    "notes": "always late with records in January"
+  },
+  {
+    "company_number": "11697272",
+    "name": "PEARSON D ELECTRICAL LIMITED",
+    "contact_name": "Patrick Clarke",
+    "contact_email": "patrick.clarke@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "10259102",
+    "name": "PENTIUM LIMITED",
+    "contact_name": "Amara Price",
+    "contact_email": "amara.price@example.test",
+    "notes": "always late with records in January"
+  },
+  {
+    "company_number": "09424816",
+    "name": "PRODUCT 101 LTD",
+    "contact_name": "Patrick Kelly",
+    "contact_email": "patrick.kelly@example.test",
+    "notes": "always late with records in January"
+  },
+  {
+    "company_number": "11002886",
+    "name": "PURPLE STAG LIMITED",
+    "contact_name": "Owen Barnes",
+    "contact_email": "owen.barnes@example.test",
+    "notes": "director travels a lot; email the bookkeeper too"
+  },
+  {
+    "company_number": "09569632",
+    "name": "ROOTECH LTD",
+    "contact_name": "Ravi Rossi",
+    "contact_email": "ravi.rossi@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "10269696",
+    "name": "S.G.HAMILTON CONSULTING LTD",
+    "contact_name": "Omar Barnes",
+    "contact_email": "omar.barnes@example.test",
+    "notes": "director travels a lot; email the bookkeeper too"
+  },
+  {
+    "company_number": "13378180",
+    "name": "SEEONE BEL LTD",
+    "contact_name": "Patrick Sharma",
+    "contact_email": "patrick.sharma@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "10199683",
+    "name": "SJW BUSINESS SOLUTIONS LIMITED",
+    "contact_name": "Megan Williams",
+    "contact_email": "megan.williams@example.test",
+    "notes": "new client this year — first filing cycle with us"
+  },
+  {
+    "company_number": "12564172",
+    "name": "SKH BEAUTY LTD",
+    "contact_name": "Hannah Ahmed",
+    "contact_email": "hannah.ahmed@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "NI668070",
+    "name": "SM 2020 (N.I.) LTD",
+    "contact_name": "Callum Williams",
+    "contact_email": "callum.williams@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "14290284",
+    "name": "SMILE HEALTH BY SOFIA DIAS LTD",
+    "contact_name": "Priya Johnson",
+    "contact_email": "priya.johnson@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "15415042",
+    "name": "SOUTHERN CLEANING SERVICES LTD",
+    "contact_name": "Callum Price",
+    "contact_email": "callum.price@example.test",
+    "notes": "prefers a phone call before month end"
+  },
+  {
+    "company_number": "15417764",
+    "name": "STEIN LAING LIMITED",
+    "contact_name": "Owen Ahmed",
+    "contact_email": "owen.ahmed@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "15296693",
+    "name": "TAILOR CARE LTD",
+    "contact_name": "Ellie Evans",
+    "contact_email": "ellie.evans@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "15363542",
+    "name": "TITANS CLEANERS LIMITED",
+    "contact_name": "Kwame Hassan",
+    "contact_email": "kwame.hassan@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "09564150",
+    "name": "TRANS ASSIST LIMITED",
+    "contact_name": "Omar Sharma",
+    "contact_email": "omar.sharma@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "10945073",
+    "name": "TRE YSGAWEN HALL LIMITED",
+    "contact_name": "Daniel Clarke",
+    "contact_email": "daniel.clarke@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "09475667",
+    "name": "VANTAGEPOINT CONSULTANCY LTD",
+    "contact_name": "Priya Evans",
+    "contact_email": "priya.evans@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "09527808",
+    "name": "WORLD'S END TECHNOLOGY LTD",
+    "contact_name": "Megan Mensah",
+    "contact_email": "megan.mensah@example.test",
+    "notes": "director travels a lot; email the bookkeeper too"
+  },
+  {
+    "company_number": "SC577162",
+    "name": "YAMATO LTD",
+    "contact_name": "Owen Barnes",
+    "contact_email": "owen.barnes@example.test",
+    "notes": ""
+  },
+  {
+    "company_number": "13436723",
+    "name": "ZLEEPY LTD",
+    "contact_name": "Marcus Sharma",
+    "contact_email": "marcus.sharma@example.test",
+    "notes": ""
+  }
+]

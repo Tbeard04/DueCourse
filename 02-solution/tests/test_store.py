@@ -39,6 +39,14 @@ def test_draft_review_roundtrip(store, deadline, client_company) -> None:
     assert store.decision_stats() == {"rejected": 1}
 
 
+def test_prune_clients(store, client_company) -> None:
+    store.upsert_client(client_company)
+    other = client_company.model_copy(update={"company_number": "99999999", "name": "Old Client"})
+    store.upsert_client(other)
+    assert store.prune_clients([client_company.company_number]) == 1
+    assert [c.company_number for c in store.clients()] == [client_company.company_number]
+
+
 def test_rejection_requires_reason(store, deadline, client_company) -> None:
     item = triage(deadline, date(2026, 11, 25))
     draft = template_draft(item, client_company)

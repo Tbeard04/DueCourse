@@ -27,6 +27,9 @@ def sync(
     clients = [ClientCompany(**entry) for entry in json.loads(portfolio.read_text("utf-8"))]
     for client in clients:
         store.upsert_client(client)
+    removed = store.prune_clients([client.company_number for client in clients])
+    if removed:
+        typer.echo(f"Pruned {removed} clients no longer in the portfolio.")
     ch = CompaniesHouseClient()
     try:
         total = 0
