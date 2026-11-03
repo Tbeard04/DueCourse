@@ -12,5 +12,8 @@ __pycache__/
 # Local data: SQLite DB, LanceDB index, API cache, generated digests
 02-solution/data/
 
+# Generated public digest page (built fresh by the publish-digest workflow)
+site/
+
 # Secrets
 .env

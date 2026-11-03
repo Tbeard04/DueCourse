@@ -1,0 +1,51 @@
+name: Publish weekly digest
+
+on:
+  schedule:
+    - cron: "30 7 * * 1" # Mondays 07:30 UTC (07:30 GMT / 08:30 BST)
+  workflow_dispatch: {} # manual runs from the Actions tab
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: 02-solution
+    env:
+      CH_API_KEY: ${{ secrets.CH_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - name: Install (slim — the digest is deterministic, no LLM or RAG needed)
+        run: uv sync --no-group rag
+      - name: Keep uv run from re-adding the rag group
+        run: echo "UV_NO_SYNC=1" >> "$GITHUB_ENV"
+      - name: Sync portfolio from the live register
+        run: uv run duecourse sync
+      - name: Triage
+        run: uv run duecourse triage
+      - name: Render the digest page
+        run: uv run python scripts/render_digest_page.py
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

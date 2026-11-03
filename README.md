@@ -9,6 +9,11 @@ across ~60 client companies — and chasing the clients for records. DueCourse w
 list through the **live Companies House public API**, triages what's due, drafts the chasing
 emails for a human to approve, and produces a Monday-morning workload digest.
 
+**Live demo:** the [public weekly digest](https://tbeard04.github.io/DueCourse/) regenerates
+itself every Monday from the live register via a scheduled GitHub Action — no servers, no LLM,
+read-only. The drafting and review queue run privately; to use those, clone the repo and bring
+your own free Companies House key (plus an optional LLM key — see Quick start).
+
 **The system never sends an email.** Every draft lands in a review queue; every decision is
 logged. Deadlines and urgency are computed deterministically from Companies House data — the LLM
 only drafts prose around injected, cited facts.
