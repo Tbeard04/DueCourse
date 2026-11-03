@@ -160,8 +160,21 @@ def template_draft(item: TriageItem, client: ClientCompany) -> DraftEmail:
     )
 
 
+def _add_usage(usage_out: dict | None, result) -> None:
+    """Accumulate token usage from a run result into usage_out (for the cost evals)."""
+    if usage_out is None:
+        return
+    usage = result.usage() if callable(getattr(result, "usage", None)) else result.usage
+    usage_out["input_tokens"] = usage_out.get("input_tokens", 0) + int(
+        getattr(usage, "input_tokens", None) or getattr(usage, "request_tokens", 0) or 0
+    )
+    usage_out["output_tokens"] = usage_out.get("output_tokens", 0) + int(
+        getattr(usage, "output_tokens", None) or getattr(usage, "response_tokens", 0) or 0
+    )
+
+
 def _validated_citations(
-    agent: Agent[DraftDeps, AgentDraft], deps: DraftDeps, result
+    agent: Agent[DraftDeps, AgentDraft], deps: DraftDeps, result, usage_out: dict | None = None
 ) -> AgentDraft:
     """Verify every citation against the corpus; one retry with feedback, then drop invalid."""
     output: AgentDraft = result.output
@@ -177,6 +190,7 @@ def _validated_citations(
         deps=deps,
         message_history=result.all_messages(),
     )
+    _add_usage(usage_out, retry)
     output = retry.output
     still_invalid = {c.quote for c in output.citations if not rag.verify_citation(c)}
     if still_invalid:
@@ -184,6 +198,38 @@ def _validated_citations(
             update={"citations": [c for c in output.citations if c.quote not in still_invalid]}
         )
     return output
+
+
+def draft_with_model(
+    model,
+    item: TriageItem,
+    client: ClientCompany,
+    store: Store | None = None,
+    ch: CompaniesHouseClient | None = None,
+    usage_out: dict | None = None,
+) -> DraftEmail:
+    """Draft one chasing email with an explicit model — also used by the model-selection eval,
+    so every candidate goes through the identical agent, tools, prompt and validation.
+    Pass a dict as usage_out to collect total input/output token counts (cost evals)."""
+    agent = build_agent(model)
+    deps = DraftDeps(item=item, client=client, store=store, ch=ch)
+    kind_label = item.deadline.kind.value.replace("_", " ")
+    result = agent.run_sync(
+        f"Draft the chasing email for {client.name} (company {item.deadline.company_number})"
+        f" about its {kind_label}. Use your tools for every fact.",
+        deps=deps,
+    )
+    _add_usage(usage_out, result)
+    output = _validated_citations(agent, deps, result, usage_out)
+    return DraftEmail(
+        company_number=item.deadline.company_number,
+        triage_item=item,
+        subject=output.subject,
+        body=output.body,
+        citations=output.citations,
+        model_used=llm.describe_model(model),
+        created_at=datetime.now(UTC),
+    )
 
 
 def draft_for(
@@ -196,22 +242,4 @@ def draft_for(
     model = llm.get_model("draft")
     if model is None:
         return template_draft(item, client)
-
-    agent = build_agent(model)
-    deps = DraftDeps(item=item, client=client, store=store, ch=ch)
-    kind_label = item.deadline.kind.value.replace("_", " ")
-    result = agent.run_sync(
-        f"Draft the chasing email for {client.name} (company {item.deadline.company_number})"
-        f" about its {kind_label}. Use your tools for every fact.",
-        deps=deps,
-    )
-    output = _validated_citations(agent, deps, result)
-    return DraftEmail(
-        company_number=item.deadline.company_number,
-        triage_item=item,
-        subject=output.subject,
-        body=output.body,
-        citations=output.citations,
-        model_used=llm.describe_model(model),
-        created_at=datetime.now(UTC),
-    )
+    return draft_with_model(model, item, client, store=store, ch=ch)

@@ -145,10 +145,14 @@ class Store:
         )
         self._db.commit()
 
-    def pending_drafts(self) -> list[DraftEmail]:
-        rows = self._db.execute(
-            "SELECT * FROM drafts WHERE state = 'pending' ORDER BY created_at"
-        ).fetchall()
+    def drafts(self, state: str | None = None) -> list[DraftEmail]:
+        """All drafts, optionally filtered by state ('pending' | 'decided')."""
+        if state is None:
+            rows = self._db.execute("SELECT * FROM drafts ORDER BY created_at").fetchall()
+        else:
+            rows = self._db.execute(
+                "SELECT * FROM drafts WHERE state = ? ORDER BY created_at", (state,)
+            ).fetchall()
         return [
             DraftEmail(
                 id=row["id"],
@@ -162,6 +166,9 @@ class Store:
             )
             for row in rows
         ]
+
+    def pending_drafts(self) -> list[DraftEmail]:
+        return self.drafts(state="pending")
 
     def record_decision(self, decision: ReviewDecision) -> None:
         """Append-only: decisions are never updated or deleted."""
