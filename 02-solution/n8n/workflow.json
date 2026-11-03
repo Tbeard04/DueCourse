@@ -1,7 +1,84 @@
 {
   "name": "DueCourse weekly digest",
-  "nodes": [],
-  "connections": {},
-  "settings": {},
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "nodes": [
+    {
+      "id": "schedule-1",
+      "name": "Monday 08:00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [0, 0],
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "weeks",
+              "weeksInterval": 1,
+              "triggerAtDay": [1],
+              "triggerAtHour": 8,
+              "triggerAtMinute": 0
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "http-digest",
+      "name": "Get latest digest",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [220, 0],
+      "parameters": {
+        "url": "http://localhost:8000/digest/latest",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {}
+      },
+      "credentials": {
+        "httpHeaderAuth": {
+          "name": "DueCourse API token"
+        }
+      }
+    },
+    {
+      "id": "code-format",
+      "name": "Format message",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [440, 0],
+      "parameters": {
+        "jsCode": "const d = $input.first().json;\nconst c = d.counts || {};\nconst headline = `DueCourse Monday digest (${d.as_of}): ${c.overdue ?? 0} overdue, ${c.due_soon ?? 0} due within 14 days, ${c.upcoming ?? 0} due within 30 days. ${d.pending_drafts ?? 0} drafts waiting for review.`;\nreturn [{ json: { text: headline + '\\n\\n' + (d.markdown || '') } }];"
+      }
+    },
+    {
+      "id": "http-post",
+      "name": "Post to practice channel",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [660, 0],
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.PRACTICE_WEBHOOK_URL }}",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ text: $json.text }) }}",
+        "options": {}
+      }
+    }
+  ],
+  "connections": {
+    "Monday 08:00": {
+      "main": [[{ "node": "Get latest digest", "type": "main", "index": 0 }]]
+    },
+    "Get latest digest": {
+      "main": [[{ "node": "Format message", "type": "main", "index": 0 }]]
+    },
+    "Format message": {
+      "main": [[{ "node": "Post to practice channel", "type": "main", "index": 0 }]]
+    }
+  },
   "pinData": {}
 }
