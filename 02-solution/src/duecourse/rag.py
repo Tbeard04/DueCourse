@@ -124,7 +124,11 @@ def build_index() -> int:
     table.add(
         [
             {
-                "text": c.text,
+                # Title + heading are prepended to the embedded text: tables and terse
+                # sections embed poorly on their own (found via the "month late" Q&A missing
+                # the penalties table), and GOV.UK guide parts often carry their semantics
+                # in the page title rather than an in-body heading.
+                "text": "\n".join(p for p in (c.source_title, c.heading_path, c.text) if p),
                 "heading_path": c.heading_path,
                 "source_title": c.source_title,
                 "source_url": c.source_url,
@@ -150,15 +154,23 @@ def search(query: str, k: int = 4) -> list[GuidanceChunk]:
         raise GuidanceUnavailable("index not built — run: uv run duecourse index-guidance") from exc
     _embedding_fn()  # ensures the query-embedding function is registered
     rows = table.search(query).limit(k).to_list()
-    return [
-        GuidanceChunk(
-            text=row["text"],
-            heading_path=row["heading_path"],
-            source_title=row["source_title"],
-            source_url=row["source_url"],
+    chunks = []
+    for row in rows:
+        # Strip the title/heading prefix added at index time (it helps the embedding, but
+        # quotes must stay verbatim against the corpus for verify_citation).
+        text = row["text"]
+        prefix = "\n".join(p for p in (row["source_title"], row["heading_path"]) if p)
+        if prefix and text.startswith(prefix + "\n"):
+            text = text[len(prefix) + 1 :]
+        chunks.append(
+            GuidanceChunk(
+                text=text,
+                heading_path=row["heading_path"],
+                source_title=row["source_title"],
+                source_url=row["source_url"],
+            )
         )
-        for row in rows
-    ]
+    return chunks
 
 
 QA_INSTRUCTIONS = """\
@@ -168,7 +180,7 @@ not contain the answer, say so plainly. Under 150 words; name the source title(s
 """
 
 
-def answer(question: str, k: int = 4) -> tuple[str | None, list[GuidanceChunk]]:
+def answer(question: str, k: int = 6) -> tuple[str | None, list[GuidanceChunk]]:
     """The review queue's "what if it's late?" Q&A. Returns (answer, sources).
 
     With no LLM configured the answer is None and the caller shows the raw extracts —
