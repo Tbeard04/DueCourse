@@ -29,3 +29,11 @@ headline + full markdown)` → `POST to practice webhook`.
 Note the API URL is `http://127.0.0.1:8000`, not `localhost`: n8n runs on Node, which resolves
 `localhost` to IPv6 (`::1`) first, while uvicorn listens on IPv4 — `localhost` here fails with
 "service refused the connection".
+
+## Verified
+
+The full loop was tested locally (2026-11-03): manual execution → authenticated digest fetch →
+format → POST received by a second n8n workflow's webhook. Testing tip: "Listen for test
+event" cancels when you switch workflows — instead, **activate** the receiver workflow and
+post to its production URL (`/webhook/<path>`, not `/webhook-test/<path>`), then read the
+arrivals in its Executions tab.
