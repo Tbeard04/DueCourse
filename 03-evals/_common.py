@@ -29,7 +29,7 @@ def write_results(name: str, payload: dict) -> Path:
 
 def usage_tokens(result) -> tuple[int, int]:
     """(input_tokens, output_tokens) from a pydantic-ai run result, across API renames."""
-    usage = result.usage() if callable(getattr(result, "usage", None)) else result.usage
+    usage = result.usage  # a property since pydantic-ai 2.x; calling it is deprecated
     input_tokens = getattr(usage, "input_tokens", None) or getattr(usage, "request_tokens", 0) or 0
     output_tokens = (
         getattr(usage, "output_tokens", None) or getattr(usage, "response_tokens", 0) or 0

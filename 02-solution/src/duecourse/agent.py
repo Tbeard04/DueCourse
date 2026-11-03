@@ -164,7 +164,7 @@ def _add_usage(usage_out: dict | None, result) -> None:
     """Accumulate token usage from a run result into usage_out (for the cost evals)."""
     if usage_out is None:
         return
-    usage = result.usage() if callable(getattr(result, "usage", None)) else result.usage
+    usage = result.usage  # a property since pydantic-ai 2.x; calling it is deprecated
     usage_out["input_tokens"] = usage_out.get("input_tokens", 0) + int(
         getattr(usage, "input_tokens", None) or getattr(usage, "request_tokens", 0) or 0
     )
