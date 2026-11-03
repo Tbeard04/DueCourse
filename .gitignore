@@ -15,5 +15,8 @@ __pycache__/
 # Generated public digest page (built fresh by the publish-digest workflow)
 site/
 
+# Local working notes (video scripts, outreach drafts) — never committed
+notes/
+
 # Secrets
 .env
