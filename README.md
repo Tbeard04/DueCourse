@@ -49,6 +49,18 @@ No agent-framework zoo, no hosted vector DB, no fine-tuning. An FDE who reaches 
 stack that works is demonstrating client judgement — the production path for the review UI would
 be a proper web app (Next.js/TypeScript); for this engagement, Streamlit ships the workflow.
 
+## What the second client would get
+
+The pattern is **deadline-driven compliance workflow**, not accountancy: a deterministic
+deadline source, triage thresholds, cited drafting against an official-guidance corpus, a
+human review queue, and a weekly digest. VAT returns, payroll year-end, lettings gas
+certificates, visa renewals — config swaps the data source and schema; the engagement
+artefacts (discovery → measurement → runbook → enablement) template directly. That's what
+makes this a repeatable client programme rather than a one-off build: the second engagement
+starts from this pack, not from zero. Two things would change at production scale: the review
+UI becomes a proper web app (Next.js/TypeScript) with the practice's own sign-in, and the
+baseline comes from the client's staff and timesheets instead of the author's stopwatch.
+
 ## Honest limitations
 
 One simulated client; baseline timed on the author; draft-quality n=30. Stated plainly here and
