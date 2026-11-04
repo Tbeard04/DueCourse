@@ -4,6 +4,11 @@ Published every Monday by .github/workflows/publish-digest.yml via GitHub Pages 
 public, read-only face of DueCourse. Deliberately shows only public register data (company
 names, filing kinds, due dates, urgency): no contacts, no drafts, no LLM involved anywhere.
 
+Design notes: zero JavaScript by choice (smallest possible attack surface for a read-only
+page, enforced by the CSP meta tag). Type and colour follow WCAG guidance — body measure
+under 75 characters, 1.5 line height, status shown as text labels with tinted GOV.UK-style
+tags so colour never carries meaning alone. Dark mode via prefers-color-scheme.
+
 Run from 02-solution:  uv run python scripts/render_digest_page.py [out_dir]
 """
 
@@ -27,39 +32,118 @@ SECTIONS = [
 
 CSS = """
 :root { color-scheme: light dark;
-  --bg: #f6f7f9; --card: #ffffff; --text: #1a202c; --muted: #64748b; --line: #e2e8f0;
-  --overdue: #dc2626; --due-soon: #d97706; --upcoming: #ca8a04; --ok: #16a34a; }
+  --page: #f9f9f7; --card: #fcfcfb; --ink: #1a1a19; --ink-2: #52514e; --muted: #767470;
+  --line: #e1e0d9;
+  --accent-overdue: #d03b3b; --accent-due-soon: #ec835a;
+  --accent-upcoming: #fab219; --accent-ok: #0ca30c;
+  --tag-overdue-bg: #f7e2e2;  --tag-overdue-ink: #8c2222;
+  --tag-due-soon-bg: #fbe9df; --tag-due-soon-ink: #873913;
+  --tag-upcoming-bg: #f8efd4; --tag-upcoming-ink: #6b5100;
+  --tag-ok-bg: #e4f1e4;       --tag-ok-ink: #006300; }
 @media (prefers-color-scheme: dark) { :root {
-  --bg: #0f172a; --card: #1e293b; --text: #e2e8f0; --muted: #94a3b8; --line: #334155; } }
+  --page: #0d0d0d; --card: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --muted: #949289;
+  --line: #2c2c2a;
+  --tag-overdue-bg: #3a1f1f;  --tag-overdue-ink: #f2aaaa;
+  --tag-due-soon-bg: #3a2517; --tag-due-soon-ink: #f4b593;
+  --tag-upcoming-bg: #342a11; --tag-upcoming-ink: #eac25d;
+  --tag-ok-bg: #1c2e1c;       --tag-ok-ink: #8fd48f; } }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--text);
-  font: 16px/1.55 system-ui, -apple-system, "Segoe UI", sans-serif; }
-main { max-width: 880px; margin: 0 auto; padding: 32px 16px 64px; }
-h1 { font-size: 1.6rem; margin: 0 0 4px; }
-.sub { color: var(--muted); margin: 0 0 24px; }
-.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 12px; margin-bottom: 28px; }
-.tile { background: var(--card); border: 1px solid var(--line); border-radius: 10px;
-  padding: 14px 16px; }
-.tile b { display: block; font-size: 1.8rem; }
-.tile span { color: var(--muted); font-size: .85rem; }
-section { margin-bottom: 28px; }
-h2 { font-size: 1.05rem; margin: 0 0 10px; }
-table { width: 100%; border-collapse: collapse; background: var(--card);
-  border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
-th, td { text-align: left; padding: 9px 12px; border-top: 1px solid var(--line);
-  font-size: .92rem; }
-thead th { border-top: none; color: var(--muted); font-weight: 600; font-size: .8rem;
-  text-transform: uppercase; letter-spacing: .04em; }
-.days { white-space: nowrap; font-variant-numeric: tabular-nums; }
-.badge { display: inline-block; padding: 1px 9px; border-radius: 99px; font-size: .78rem;
-  font-weight: 600; color: #fff; }
-.b-overdue { background: var(--overdue); } .b-due-soon { background: var(--due-soon); }
-.b-upcoming { background: var(--upcoming); } .b-ok { background: var(--ok); }
-footer { color: var(--muted); font-size: .85rem; border-top: 1px solid var(--line);
-  padding-top: 16px; }
-footer a { color: inherit; }
+body { margin: 0; background: var(--page); color: var(--ink);
+  font: 1rem/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-text-size-adjust: 100%; }
+main { max-width: 52rem; margin: 0 auto; padding: 3rem 1rem 4.5rem; }
+header { margin-bottom: 2.25rem; }
+h1 { font-size: clamp(1.5rem, 1.2rem + 1.5vw, 1.9rem); line-height: 1.2;
+  letter-spacing: -0.015em; margin: 0 0 0.5rem; }
+.lede { color: var(--ink-2); max-width: 60ch; margin: 0 0 0.5rem; }
+.meta { color: var(--muted); font-size: 0.875rem; margin: 0; }
+.tiles { list-style: none; display: grid; margin: 0 0 2.5rem; padding: 0;
+  grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr)); gap: 0.75rem; }
+.tiles li { background: var(--card); border: 1px solid var(--line);
+  border-top: 3px solid var(--line); border-radius: 6px; padding: 0.9rem 1rem 0.8rem; }
+.tiles li.t-overdue { border-top-color: var(--accent-overdue); }
+.tiles li.t-due-soon { border-top-color: var(--accent-due-soon); }
+.tiles li.t-upcoming { border-top-color: var(--accent-upcoming); }
+.tiles li.t-ok { border-top-color: var(--accent-ok); }
+.tiles b { display: block; font-size: 1.9rem; line-height: 1.15; font-weight: 650; }
+.tiles span { color: var(--ink-2); font-size: 0.85rem; }
+section { margin-bottom: 2.5rem; }
+h2 { font-size: 1.1rem; line-height: 1.3; margin: 0 0 0.75rem;
+  display: flex; align-items: baseline; gap: 0.6rem; }
+h2 .count { color: var(--muted); font-weight: 400; font-size: 0.95rem; }
+.tag { display: inline-block; padding: 0.1rem 0.55rem; border-radius: 4px;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.01em; white-space: nowrap; }
+.tag-overdue { background: var(--tag-overdue-bg); color: var(--tag-overdue-ink); }
+.tag-due-soon { background: var(--tag-due-soon-bg); color: var(--tag-due-soon-ink); }
+.tag-upcoming { background: var(--tag-upcoming-bg); color: var(--tag-upcoming-ink); }
+.tag-ok { background: var(--tag-ok-bg); color: var(--tag-ok-ink); }
+.table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 6px;
+  background: var(--card); }
+table { width: 100%; border-collapse: collapse; }
+caption { position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); }
+th, td { text-align: left; padding: 0.6rem 0.9rem; border-top: 1px solid var(--line);
+  font-size: 0.92rem; vertical-align: top; }
+thead th { border-top: none; color: var(--muted); font-weight: 600; font-size: 0.75rem;
+  text-transform: uppercase; letter-spacing: 0.05em; }
+th.num, td.num { text-align: right; white-space: nowrap;
+  font-variant-numeric: tabular-nums; }
+.co-no { display: block; color: var(--muted); font-size: 0.8rem; font-weight: 400;
+  font-variant-numeric: tabular-nums; }
+tbody th { font-weight: 600; }
+.due { white-space: nowrap; font-variant-numeric: tabular-nums; }
+details { border: 1px solid var(--line); border-radius: 6px; background: var(--card); }
+summary { cursor: pointer; padding: 0.75rem 1rem; font-weight: 600; font-size: 1rem; }
+summary:hover { text-decoration: underline; }
+summary .count { color: var(--muted); font-weight: 400; }
+details .table-wrap { border: none; border-top: 1px solid var(--line); border-radius: 0; }
+footer { color: var(--ink-2); font-size: 0.875rem; line-height: 1.55;
+  border-top: 1px solid var(--line); padding-top: 1.25rem; max-width: 65ch; }
+footer p { margin: 0 0 0.75rem; }
+footer a { color: inherit; text-underline-offset: 2px; }
+footer a:hover { color: var(--ink); }
+@media (max-width: 560px) {
+  main { padding-top: 2rem; }
+  .tiles { grid-template-columns: repeat(2, 1fr); }
+  /* Stack table rows so urgency is never hidden behind horizontal scroll. */
+  thead { position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); }
+  table, tbody { display: block; }
+  tbody tr { display: block; padding: 0.6rem 0.9rem 0.65rem; border-top: 1px solid var(--line); }
+  tbody tr:first-child { border-top: none; }
+  tbody th, td { display: inline; border: none; padding: 0; }
+  tbody th { display: block; padding-bottom: 0.15rem; }
+  td { font-size: 0.875rem; color: var(--ink-2); }
+  td + td::before { content: " · "; color: var(--muted); }
+  td.num { color: var(--ink); font-weight: 600; }
+  .co-no { display: inline; margin-left: 0.4rem; }
+}
 """
+
+
+def _days_phrase(days: int) -> str:
+    if days < 0:
+        return f"{-days} day{'s' if days != -1 else ''} overdue"
+    if days == 0:
+        return "due today"
+    return f"in {days} day{'s' if days != 1 else ''}"
+
+
+def _table(rows, names, label: str) -> str:
+    body = "".join(
+        f"<tr><th scope=\"row\">{escape(names[i.deadline.company_number])}"
+        f'<span class="co-no">{escape(i.deadline.company_number)}</span></th>'
+        f"<td>{escape(i.deadline.kind.value.replace('_', ' '))}</td>"
+        f'<td class="due">{i.deadline.due_date.strftime("%d %b %Y")}</td>'
+        f'<td class="num">{_days_phrase(i.days_until_due)}</td></tr>'
+        for i in rows
+    )
+    return (
+        f'<div class="table-wrap"><table><caption>{escape(label)}</caption>'
+        '<thead><tr><th scope="col">Company</th><th scope="col">Filing</th>'
+        '<th scope="col">Due date</th><th scope="col" class="num">Due in</th></tr></thead>'
+        f"<tbody>{body}</tbody></table></div>"
+    )
 
 
 def main() -> int:
@@ -82,51 +166,58 @@ def main() -> int:
     counts = {status: sum(1 for i in items if i.status == status) for status, _, _ in SECTIONS}
 
     tiles = "".join(
-        f'<div class="tile"><b>{counts[status]}</b><span>{label}</span></div>'
-        for status, label, _ in SECTIONS
+        f'<li class="t-{slug}"><b>{counts[status]}</b><span>{label}</span></li>'
+        for status, label, slug in SECTIONS
     )
     sections = []
     for status, label, slug in SECTIONS:
         rows = [i for i in items if i.status == status]
         if not rows:
             continue
-        body = "".join(
-            f"<tr><td>{escape(names[i.deadline.company_number])}"
-            f'<br><span style="color:var(--muted);font-size:.8rem">'
-            f"{escape(i.deadline.company_number)}</span></td>"
-            f"<td>{escape(i.deadline.kind.value.replace('_', ' '))}</td>"
-            f"<td>{i.deadline.due_date.isoformat()}</td>"
-            f'<td class="days">{i.days_until_due:+d} days</td>'
-            f'<td><span class="badge b-{slug}">{escape(label)}</span></td></tr>'
-            for i in rows
-        )
-        sections.append(
-            f"<section><h2>{escape(label)} ({len(rows)})</h2><table>"
-            "<thead><tr><th>Company</th><th>Filing</th><th>Due</th><th>Days</th>"
-            f"<th>Status</th></tr></thead><tbody>{body}</tbody></table></section>"
-        )
+        table = _table(rows, names, label)
+        if status is TriageStatus.OK:
+            # The long tail: collapsed by default so the page leads with what needs action.
+            sections.append(
+                f"<section><details><summary>{escape(label)} "
+                f'<span class="count">({len(rows)} deadlines)</span></summary>'
+                f"{table}</details></section>"
+            )
+        else:
+            sections.append(
+                f'<section><h2><span class="tag tag-{slug}">{escape(label)}</span>'
+                f'<span class="count">{len(rows)} '
+                f"deadline{'s' if len(rows) != 1 else ''}</span></h2>{table}</section>"
+            )
 
     generated = datetime.now(UTC).strftime("%A %d %B %Y, %H:%M UTC")
     html = f"""<!doctype html>
-<html lang="en">
+<html lang="en-GB">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DueCourse digest</title>
+<meta http-equiv="Content-Security-Policy"
+  content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<meta name="description" content="Weekly Companies House filing digest for a demo
+accountancy portfolio — deadlines triaged deterministically from the live public register.">
+<title>DueCourse — weekly filing digest</title>
 <style>{CSS}</style>
 </head>
 <body><main>
-<h1>DueCourse — weekly filing digest</h1>
-<p class="sub">A demo accountancy portfolio of {len(names)} real UK companies, triaged against
-the live Companies House register · snapshot as of {as_of.strftime("%d %B %Y")}</p>
-<div class="tiles">{tiles}</div>
+<header>
+<h1>Weekly filing digest</h1>
+<p class="lede">A demo accountancy portfolio of {len(names)} real UK companies, triaged
+against the live Companies House register.</p>
+<p class="meta">Snapshot as of {as_of.strftime("%d %B %Y")} · regenerates every Monday</p>
+</header>
+<ul class="tiles">{tiles}</ul>
 {"".join(sections)}
 <footer>
-<p>Regenerated every Monday by a scheduled GitHub Action — no servers, no manual steps.
-Deadlines and urgency are computed deterministically from
-<a href="https://developer.company-information.service.gov.uk/">Companies House public data</a>;
-no AI touches this page. The human-in-the-loop drafting and review queue run privately inside
-the practice — <a href="https://github.com/Tbeard04/DueCourse">source and engagement pack</a>.
+<p>Rebuilt every Monday by a scheduled GitHub Action — no servers, no manual steps, and no
+JavaScript on this page. Deadlines and urgency are computed deterministically from
+<a href="https://developer.company-information.service.gov.uk/">Companies House public
+data</a>; no AI touches this page.</p>
+<p>The human-in-the-loop drafting and review queue run privately inside the practice —
+see the <a href="https://github.com/Tbeard04/DueCourse">source and engagement pack</a>.
 Nothing is ever sent automatically. Generated {generated}.</p>
 </footer>
 </main></body></html>
