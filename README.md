@@ -30,6 +30,38 @@ only drafts prose around injected, cited facts.
 | [05-handover](05-handover/) | Runbook and risk register |
 | [06-enablement](06-enablement/) | The 10-minute training session for the practice's staff |
 
+## Where the engagement stands
+
+The build is done; what remains is the consulting discipline — validating the evals with a
+human, measuring the value, and enabling the client.
+
+**Done and verified:**
+
+- Triage: **120/120** deadlines exact-match against the live register's own answers
+  ([results](03-evals/results/results.md))
+- Cited drafting: **110/110** penalty citations machine-verified verbatim against the GOV.UK
+  guidance corpus
+- Model selection: four candidates compared under a constant judge; **claude-sonnet-5-5**
+  shipped as the default — paying 2× for the top-tier model bought no measured quality gain,
+  and the local 8B model failed the structured-output contract on 17/20 tasks
+  ([memo](03-evals/model-selection.md))
+- The never-sends guarantee is CI-enforced: a test walks the codebase proving no mail library
+  exists anywhere
+- Live public digest shipped: Next.js + TypeScript, statically exported, rebuilt from the
+  register every Monday by a scheduled GitHub Action
+
+**Next, in order:**
+
+1. **Hand-score the 30-draft blind pack** ([scoring pack](03-evals/results/scoring_pack.md))
+   and compute human–judge agreement (Cohen's kappa via
+   [agreement.py](03-evals/agreement.py)). The LLM judge shares a model family with the
+   shipped default, so its verdicts only become client-grade evidence once a human has
+   calibrated them against blind scores.
+2. **Run the timed before/after measurement** ([protocol](04-measurement/measurement.md)) and
+   replace the X/Y/Z headline at the top of this page with measured numbers.
+3. **Deliver enablement**: record the training session from
+   [06-enablement](06-enablement/training-session.md) as the client-facing walkthrough.
+
 ## Quick start
 
 ```bash
