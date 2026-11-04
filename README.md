@@ -10,7 +10,8 @@ list through the **live Companies House public API**, triages what's due, drafts
 emails for a human to approve, and produces a Monday-morning workload digest.
 
 **Live demo:** the [public weekly digest](https://tbeard04.github.io/DueCourse/) regenerates
-itself every Monday from the live register via a scheduled GitHub Action — no servers, no LLM,
+itself every Monday from the live register via a scheduled GitHub Action — a statically
+exported Next.js + TypeScript page ([02-solution/web](02-solution/web/)): no servers, no LLM,
 read-only. The drafting and review queue run privately; to use those, clone the repo and bring
 your own free Companies House key (plus an optional LLM key — see Quick start).
 
@@ -46,8 +47,9 @@ templates. Set `ANTHROPIC_API_KEY` for model-drafted emails, or run Ollama local
 ## Deliberately not used
 
 No agent-framework zoo, no hosted vector DB, no fine-tuning. An FDE who reaches for the minimum
-stack that works is demonstrating client judgement — the production path for the review UI would
-be a proper web app (Next.js/TypeScript); for this engagement, Streamlit ships the workflow.
+stack that works is demonstrating client judgement — the public digest frontend shows the
+production web stack (Next.js/TypeScript, statically exported); for the internal review queue,
+Streamlit ships the workflow this engagement needs.
 
 ## What the second client would get
 
@@ -58,8 +60,9 @@ certificates, visa renewals — config swaps the data source and schema; the eng
 artefacts (discovery → measurement → runbook → enablement) template directly. That's what
 makes this a repeatable client programme rather than a one-off build: the second engagement
 starts from this pack, not from zero. Two things would change at production scale: the review
-UI becomes a proper web app (Next.js/TypeScript) with the practice's own sign-in, and the
-baseline comes from the client's staff and timesheets instead of the author's stopwatch.
+UI graduates from Streamlit to the same Next.js/TypeScript stack as the public digest, with
+the practice's own sign-in, and the baseline comes from the client's staff and timesheets
+instead of the author's stopwatch.
 
 ## Honest limitations
 

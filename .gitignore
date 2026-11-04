@@ -12,8 +12,11 @@ __pycache__/
 # Local data: SQLite DB, LanceDB index, API cache, generated digests
 02-solution/data/
 
-# Generated public digest page (built fresh by the publish-digest workflow)
-site/
+# Frontend build artifacts (the publish-digest workflow builds fresh from source)
+02-solution/web/node_modules/
+02-solution/web/.next/
+02-solution/web/out/
+02-solution/web/*.tsbuildinfo
 
 # Local working notes (video scripts, outreach drafts) — never committed
 notes/

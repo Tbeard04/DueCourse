@@ -17,9 +17,6 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: 02-solution
     env:
       CH_API_KEY: ${{ secrets.CH_API_KEY }}
     steps:
@@ -27,18 +24,35 @@ jobs:
       - uses: astral-sh/setup-uv@v5
       - name: Install (slim — the digest is deterministic, no LLM or RAG needed)
         run: uv sync --no-group rag
+        working-directory: 02-solution
       - name: Keep uv run from re-adding the rag group
         run: echo "UV_NO_SYNC=1" >> "$GITHUB_ENV"
       - name: Sync portfolio from the live register
         run: uv run duecourse sync
+        working-directory: 02-solution
       - name: Triage
         run: uv run duecourse triage
-      - name: Render the digest page
-        run: uv run python scripts/render_digest_page.py
+        working-directory: 02-solution
+      - name: Export digest data for the frontend
+        run: uv run python scripts/export_digest_data.py
+        working-directory: 02-solution
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: 02-solution/web/package-lock.json
+      - name: Install frontend dependencies
+        run: npm ci
+        working-directory: 02-solution/web
+      - name: Build the static site (Next.js export)
+        run: npm run build
+        working-directory: 02-solution/web
+        env:
+          PAGES_BASE_PATH: /DueCourse # project sites are served under /<repo>
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
-          path: site
+          path: 02-solution/web/out
 
   deploy:
     needs: build

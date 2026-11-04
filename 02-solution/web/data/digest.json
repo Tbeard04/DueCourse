@@ -1,0 +1,871 @@
+{
+  "asOf": "03 November 2026",
+  "generated": "Wednesday 04 November 2026, 11:57 UTC",
+  "portfolioSize": 60,
+  "sections": [
+    {
+      "slug": "overdue",
+      "label": "Overdue",
+      "items": [
+        {
+          "companyName": "PEARSON D ELECTRICAL LIMITED",
+          "companyNumber": "11697272",
+          "filing": "annual accounts",
+          "dueDate": "2026-08-31",
+          "daysUntilDue": -64
+        },
+        {
+          "companyName": "NURA POINT LIMITED",
+          "companyNumber": "14326477",
+          "filing": "confirmation statement",
+          "dueDate": "2026-09-13",
+          "daysUntilDue": -51
+        }
+      ]
+    },
+    {
+      "slug": "due-soon",
+      "label": "Due within 14 days",
+      "items": [
+        {
+          "companyName": "C & L ELECTRICAL SOLUTIONS LTD",
+          "companyNumber": "11699448",
+          "filing": "confirmation statement",
+          "dueDate": "2026-11-06",
+          "daysUntilDue": 3
+        },
+        {
+          "companyName": "PEARSON D ELECTRICAL LIMITED",
+          "companyNumber": "11697272",
+          "filing": "confirmation statement",
+          "dueDate": "2026-11-09",
+          "daysUntilDue": 6
+        },
+        {
+          "companyName": "C & I CLEANING SERVICES LTD",
+          "companyNumber": "15256527",
+          "filing": "confirmation statement",
+          "dueDate": "2026-11-15",
+          "daysUntilDue": 12
+        },
+        {
+          "companyName": "YAMATO LTD",
+          "companyNumber": "SC577162",
+          "filing": "confirmation statement",
+          "dueDate": "2026-11-16",
+          "daysUntilDue": 13
+        }
+      ]
+    },
+    {
+      "slug": "upcoming",
+      "label": "Due within 30 days",
+      "items": [
+        {
+          "companyName": "TAILOR CARE LTD",
+          "companyNumber": "15296693",
+          "filing": "confirmation statement",
+          "dueDate": "2026-12-03",
+          "daysUntilDue": 30
+        }
+      ]
+    },
+    {
+      "slug": "ok",
+      "label": "On track",
+      "items": [
+        {
+          "companyName": "ELEKTROWE SOLUTIONS LIMITED",
+          "companyNumber": "11704747",
+          "filing": "confirmation statement",
+          "dueDate": "2026-12-13",
+          "daysUntilDue": 40
+        },
+        {
+          "companyName": "HS SECURITY CONTRACTS LIMITED",
+          "companyNumber": "11676204",
+          "filing": "confirmation statement",
+          "dueDate": "2026-12-13",
+          "daysUntilDue": 40
+        },
+        {
+          "companyName": "GOODFELLOW ELECTRICAL SOLUTIONS LTD",
+          "companyNumber": "11714493",
+          "filing": "confirmation statement",
+          "dueDate": "2026-12-20",
+          "daysUntilDue": 47
+        },
+        {
+          "companyName": "AMPERE ELECTRICAL SERVICES LIMITED",
+          "companyNumber": "11722065",
+          "filing": "confirmation statement",
+          "dueDate": "2026-12-24",
+          "daysUntilDue": 51
+        },
+        {
+          "companyName": "A&S CORPORATION LIMITED",
+          "companyNumber": "10908101",
+          "filing": "confirmation statement",
+          "dueDate": "2026-12-29",
+          "daysUntilDue": 56
+        },
+        {
+          "companyName": "HARIAN LTD",
+          "companyNumber": "12506395",
+          "filing": "annual accounts",
+          "dueDate": "2026-12-29",
+          "daysUntilDue": 56
+        },
+        {
+          "companyName": "NEW HORIZON CLEANING SERVICES LTD",
+          "companyNumber": "SC796032",
+          "filing": "annual accounts",
+          "dueDate": "2026-12-31",
+          "daysUntilDue": 58
+        },
+        {
+          "companyName": "PRODUCT 101 LTD",
+          "companyNumber": "09424816",
+          "filing": "annual accounts",
+          "dueDate": "2026-12-31",
+          "daysUntilDue": 58
+        },
+        {
+          "companyName": "TITANS CLEANERS LIMITED",
+          "companyNumber": "15363542",
+          "filing": "annual accounts",
+          "dueDate": "2026-12-31",
+          "daysUntilDue": 58
+        },
+        {
+          "companyName": "VANTAGEPOINT CONSULTANCY LTD",
+          "companyNumber": "09475667",
+          "filing": "annual accounts",
+          "dueDate": "2026-12-31",
+          "daysUntilDue": 58
+        },
+        {
+          "companyName": "TITANS CLEANERS LIMITED",
+          "companyNumber": "15363542",
+          "filing": "confirmation statement",
+          "dueDate": "2027-01-02",
+          "daysUntilDue": 60
+        },
+        {
+          "companyName": "DYNASTY SERVICES LTD",
+          "companyNumber": "15373697",
+          "filing": "confirmation statement",
+          "dueDate": "2027-01-10",
+          "daysUntilDue": 68
+        },
+        {
+          "companyName": "KLF MECHANICAL & ELECTRICAL LTD",
+          "companyNumber": "11758074",
+          "filing": "confirmation statement",
+          "dueDate": "2027-01-22",
+          "daysUntilDue": 80
+        },
+        {
+          "companyName": "SOUTHERN CLEANING SERVICES LTD",
+          "companyNumber": "15415042",
+          "filing": "confirmation statement",
+          "dueDate": "2027-01-29",
+          "daysUntilDue": 87
+        },
+        {
+          "companyName": "26 MILE CONSULTANCY LTD",
+          "companyNumber": "09553253",
+          "filing": "annual accounts",
+          "dueDate": "2027-01-31",
+          "daysUntilDue": 89
+        },
+        {
+          "companyName": "KUMA CONSULTING LIMITED",
+          "companyNumber": "10208355",
+          "filing": "annual accounts",
+          "dueDate": "2027-01-31",
+          "daysUntilDue": 89
+        },
+        {
+          "companyName": "OXLEY BARNES LIMITED",
+          "companyNumber": "09528299",
+          "filing": "annual accounts",
+          "dueDate": "2027-01-31",
+          "daysUntilDue": 89
+        },
+        {
+          "companyName": "ROOTECH LTD",
+          "companyNumber": "09569632",
+          "filing": "annual accounts",
+          "dueDate": "2027-01-31",
+          "daysUntilDue": 89
+        },
+        {
+          "companyName": "SKH BEAUTY LTD",
+          "companyNumber": "12564172",
+          "filing": "annual accounts",
+          "dueDate": "2027-01-31",
+          "daysUntilDue": 89
+        },
+        {
+          "companyName": "WORLD'S END TECHNOLOGY LTD",
+          "companyNumber": "09527808",
+          "filing": "annual accounts",
+          "dueDate": "2027-01-31",
+          "daysUntilDue": 89
+        },
+        {
+          "companyName": "NEW HORIZON CLEANING SERVICES LTD",
+          "companyNumber": "SC796032",
+          "filing": "confirmation statement",
+          "dueDate": "2027-02-03",
+          "daysUntilDue": 92
+        },
+        {
+          "companyName": "GREEN TRANSPORTATION LTD",
+          "companyNumber": "13495530",
+          "filing": "confirmation statement",
+          "dueDate": "2027-02-09",
+          "daysUntilDue": 98
+        },
+        {
+          "companyName": "FORBURY FM LTD",
+          "companyNumber": "15452348",
+          "filing": "confirmation statement",
+          "dueDate": "2027-02-12",
+          "daysUntilDue": 101
+        },
+        {
+          "companyName": "26 MILE CONSULTANCY LTD",
+          "companyNumber": "09553253",
+          "filing": "confirmation statement",
+          "dueDate": "2027-02-16",
+          "daysUntilDue": 105
+        },
+        {
+          "companyName": "PRODUCT 101 LTD",
+          "companyNumber": "09424816",
+          "filing": "confirmation statement",
+          "dueDate": "2027-02-19",
+          "daysUntilDue": 108
+        },
+        {
+          "companyName": "ALAND K BARBER LIMITED",
+          "companyNumber": "12459840",
+          "filing": "confirmation statement",
+          "dueDate": "2027-02-26",
+          "daysUntilDue": 115
+        },
+        {
+          "companyName": "LAGRAVE FIDUCIARIES LIMITED",
+          "companyNumber": "10166276",
+          "filing": "annual accounts",
+          "dueDate": "2027-02-28",
+          "daysUntilDue": 117
+        },
+        {
+          "companyName": "LET'S GIFT SOMETHING LTD",
+          "companyNumber": "13381650",
+          "filing": "annual accounts",
+          "dueDate": "2027-02-28",
+          "daysUntilDue": 117
+        },
+        {
+          "companyName": "MCINERNEY AUDIT & PACKAGING SOLUTIONS LIMITED",
+          "companyNumber": "10174268",
+          "filing": "annual accounts",
+          "dueDate": "2027-02-28",
+          "daysUntilDue": 117
+        },
+        {
+          "companyName": "NOI E-COM LTD",
+          "companyNumber": "13412105",
+          "filing": "annual accounts",
+          "dueDate": "2027-02-28",
+          "daysUntilDue": 117
+        },
+        {
+          "companyName": "SEEONE BEL LTD",
+          "companyNumber": "13378180",
+          "filing": "annual accounts",
+          "dueDate": "2027-02-28",
+          "daysUntilDue": 117
+        },
+        {
+          "companyName": "SJW BUSINESS SOLUTIONS LIMITED",
+          "companyNumber": "10199683",
+          "filing": "annual accounts",
+          "dueDate": "2027-02-28",
+          "daysUntilDue": 117
+        },
+        {
+          "companyName": "SM 2020 (N.I.) LTD",
+          "companyNumber": "NI668070",
+          "filing": "annual accounts",
+          "dueDate": "2027-02-28",
+          "daysUntilDue": 117
+        },
+        {
+          "companyName": "SM 2020 (N.I.) LTD",
+          "companyNumber": "NI668070",
+          "filing": "confirmation statement",
+          "dueDate": "2027-03-14",
+          "daysUntilDue": 131
+        },
+        {
+          "companyName": "CRIMPIT GROUP LTD",
+          "companyNumber": "13450658",
+          "filing": "annual accounts",
+          "dueDate": "2027-03-29",
+          "daysUntilDue": 146
+        },
+        {
+          "companyName": "MELEYE LONDON LTD",
+          "companyNumber": "13469376",
+          "filing": "confirmation statement",
+          "dueDate": "2027-03-30",
+          "daysUntilDue": 147
+        },
+        {
+          "companyName": "DANCER GROUP LIMITED",
+          "companyNumber": "13472555",
+          "filing": "annual accounts",
+          "dueDate": "2027-03-31",
+          "daysUntilDue": 148
+        },
+        {
+          "companyName": "FABULOUS LOOKS UK LTD",
+          "companyNumber": "13440401",
+          "filing": "annual accounts",
+          "dueDate": "2027-03-31",
+          "daysUntilDue": 148
+        },
+        {
+          "companyName": "LOKY FASHION LTD",
+          "companyNumber": "13447570",
+          "filing": "annual accounts",
+          "dueDate": "2027-03-31",
+          "daysUntilDue": 148
+        },
+        {
+          "companyName": "MELEYE LONDON LTD",
+          "companyNumber": "13469376",
+          "filing": "annual accounts",
+          "dueDate": "2027-03-31",
+          "daysUntilDue": 148
+        },
+        {
+          "companyName": "TRE YSGAWEN HALL LIMITED",
+          "companyNumber": "10945073",
+          "filing": "annual accounts",
+          "dueDate": "2027-03-31",
+          "daysUntilDue": 148
+        },
+        {
+          "companyName": "ZLEEPY LTD",
+          "companyNumber": "13436723",
+          "filing": "annual accounts",
+          "dueDate": "2027-03-31",
+          "daysUntilDue": 148
+        },
+        {
+          "companyName": "OXLEY BARNES LIMITED",
+          "companyNumber": "09528299",
+          "filing": "confirmation statement",
+          "dueDate": "2027-04-13",
+          "daysUntilDue": 161
+        },
+        {
+          "companyName": "HARIAN LTD",
+          "companyNumber": "12506395",
+          "filing": "confirmation statement",
+          "dueDate": "2027-04-17",
+          "daysUntilDue": 165
+        },
+        {
+          "companyName": "TRANS ASSIST LIMITED",
+          "companyNumber": "09564150",
+          "filing": "confirmation statement",
+          "dueDate": "2027-04-17",
+          "daysUntilDue": 165
+        },
+        {
+          "companyName": "WORLD'S END TECHNOLOGY LTD",
+          "companyNumber": "09527808",
+          "filing": "confirmation statement",
+          "dueDate": "2027-04-21",
+          "daysUntilDue": 169
+        },
+        {
+          "companyName": "ECOM GRIND LTD",
+          "companyNumber": "13503806",
+          "filing": "annual accounts",
+          "dueDate": "2027-04-30",
+          "daysUntilDue": 178
+        },
+        {
+          "companyName": "GREEN TRANSPORTATION LTD",
+          "companyNumber": "13495530",
+          "filing": "annual accounts",
+          "dueDate": "2027-04-30",
+          "daysUntilDue": 178
+        },
+        {
+          "companyName": "MARY & JAYNE LTD",
+          "companyNumber": "13494471",
+          "filing": "annual accounts",
+          "dueDate": "2027-04-30",
+          "daysUntilDue": 178
+        },
+        {
+          "companyName": "S.G.HAMILTON CONSULTING LTD",
+          "companyNumber": "10269696",
+          "filing": "annual accounts",
+          "dueDate": "2027-04-30",
+          "daysUntilDue": 178
+        },
+        {
+          "companyName": "SKH BEAUTY LTD",
+          "companyNumber": "12564172",
+          "filing": "confirmation statement",
+          "dueDate": "2027-05-03",
+          "daysUntilDue": 181
+        },
+        {
+          "companyName": "ROOTECH LTD",
+          "companyNumber": "09569632",
+          "filing": "confirmation statement",
+          "dueDate": "2027-05-07",
+          "daysUntilDue": 185
+        },
+        {
+          "companyName": "MCINERNEY AUDIT & PACKAGING SOLUTIONS LIMITED",
+          "companyNumber": "10174268",
+          "filing": "confirmation statement",
+          "dueDate": "2027-05-08",
+          "daysUntilDue": 186
+        },
+        {
+          "companyName": "SEEONE BEL LTD",
+          "companyNumber": "13378180",
+          "filing": "confirmation statement",
+          "dueDate": "2027-05-18",
+          "daysUntilDue": 196
+        },
+        {
+          "companyName": "LAGRAVE FIDUCIARIES LIMITED",
+          "companyNumber": "10166276",
+          "filing": "confirmation statement",
+          "dueDate": "2027-05-19",
+          "daysUntilDue": 197
+        },
+        {
+          "companyName": "LET'S GIFT SOMETHING LTD",
+          "companyNumber": "13381650",
+          "filing": "confirmation statement",
+          "dueDate": "2027-05-20",
+          "daysUntilDue": 198
+        },
+        {
+          "companyName": "BANDING & STRAPPING LTD",
+          "companyNumber": "13413013",
+          "filing": "confirmation statement",
+          "dueDate": "2027-05-22",
+          "daysUntilDue": 200
+        },
+        {
+          "companyName": "NOI E-COM LTD",
+          "companyNumber": "13412105",
+          "filing": "confirmation statement",
+          "dueDate": "2027-05-26",
+          "daysUntilDue": 204
+        },
+        {
+          "companyName": "LONGTOO LIMITED",
+          "companyNumber": "13403183",
+          "filing": "confirmation statement",
+          "dueDate": "2027-05-30",
+          "daysUntilDue": 208
+        },
+        {
+          "companyName": "A&S CORPORATION LIMITED",
+          "companyNumber": "10908101",
+          "filing": "annual accounts",
+          "dueDate": "2027-05-31",
+          "daysUntilDue": 209
+        },
+        {
+          "companyName": "KLASS HOLDINGS LTD",
+          "companyNumber": "14276671",
+          "filing": "annual accounts",
+          "dueDate": "2027-05-31",
+          "daysUntilDue": 209
+        },
+        {
+          "companyName": "NURA POINT LIMITED",
+          "companyNumber": "14326477",
+          "filing": "annual accounts",
+          "dueDate": "2027-05-31",
+          "daysUntilDue": 209
+        },
+        {
+          "companyName": "PENTIUM LIMITED",
+          "companyNumber": "10259102",
+          "filing": "annual accounts",
+          "dueDate": "2027-05-31",
+          "daysUntilDue": 209
+        },
+        {
+          "companyName": "SJW BUSINESS SOLUTIONS LIMITED",
+          "companyNumber": "10199683",
+          "filing": "confirmation statement",
+          "dueDate": "2027-06-07",
+          "daysUntilDue": 216
+        },
+        {
+          "companyName": "VANTAGEPOINT CONSULTANCY LTD",
+          "companyNumber": "09475667",
+          "filing": "confirmation statement",
+          "dueDate": "2027-06-12",
+          "daysUntilDue": 221
+        },
+        {
+          "companyName": "KUMA CONSULTING LIMITED",
+          "companyNumber": "10208355",
+          "filing": "confirmation statement",
+          "dueDate": "2027-06-13",
+          "daysUntilDue": 222
+        },
+        {
+          "companyName": "BAYHASME LIMITED",
+          "companyNumber": "11033552",
+          "filing": "confirmation statement",
+          "dueDate": "2027-06-14",
+          "daysUntilDue": 223
+        },
+        {
+          "companyName": "LOKY FASHION LTD",
+          "companyNumber": "13447570",
+          "filing": "confirmation statement",
+          "dueDate": "2027-06-14",
+          "daysUntilDue": 223
+        },
+        {
+          "companyName": "ZLEEPY LTD",
+          "companyNumber": "13436723",
+          "filing": "confirmation statement",
+          "dueDate": "2027-06-14",
+          "daysUntilDue": 223
+        },
+        {
+          "companyName": "FABULOUS LOOKS UK LTD",
+          "companyNumber": "13440401",
+          "filing": "confirmation statement",
+          "dueDate": "2027-06-20",
+          "daysUntilDue": 229
+        },
+        {
+          "companyName": "ABABEEL RESTAURANT LTD",
+          "companyNumber": "10963784",
+          "filing": "annual accounts",
+          "dueDate": "2027-06-30",
+          "daysUntilDue": 239
+        },
+        {
+          "companyName": "BAYHASME LIMITED",
+          "companyNumber": "11033552",
+          "filing": "annual accounts",
+          "dueDate": "2027-06-30",
+          "daysUntilDue": 239
+        },
+        {
+          "companyName": "DRD PARTNERS LTD",
+          "companyNumber": "14361678",
+          "filing": "annual accounts",
+          "dueDate": "2027-06-30",
+          "daysUntilDue": 239
+        },
+        {
+          "companyName": "MAK SMILE SERVICES LTD",
+          "companyNumber": "14347513",
+          "filing": "annual accounts",
+          "dueDate": "2027-06-30",
+          "daysUntilDue": 239
+        },
+        {
+          "companyName": "YAMATO LTD",
+          "companyNumber": "SC577162",
+          "filing": "annual accounts",
+          "dueDate": "2027-06-30",
+          "daysUntilDue": 239
+        },
+        {
+          "companyName": "DANCER GROUP LIMITED",
+          "companyNumber": "13472555",
+          "filing": "confirmation statement",
+          "dueDate": "2027-07-06",
+          "daysUntilDue": 245
+        },
+        {
+          "companyName": "S.G.HAMILTON CONSULTING LTD",
+          "companyNumber": "10269696",
+          "filing": "confirmation statement",
+          "dueDate": "2027-07-15",
+          "daysUntilDue": 254
+        },
+        {
+          "companyName": "MARY & JAYNE LTD",
+          "companyNumber": "13494471",
+          "filing": "confirmation statement",
+          "dueDate": "2027-07-18",
+          "daysUntilDue": 257
+        },
+        {
+          "companyName": "ECOM GRIND LTD",
+          "companyNumber": "13503806",
+          "filing": "confirmation statement",
+          "dueDate": "2027-07-22",
+          "daysUntilDue": 261
+        },
+        {
+          "companyName": "ANNYLONDON ENTERPRISE LIMITED",
+          "companyNumber": "11000845",
+          "filing": "annual accounts",
+          "dueDate": "2027-07-31",
+          "daysUntilDue": 270
+        },
+        {
+          "companyName": "DAMBA CONSULTANTS LTD",
+          "companyNumber": "11040539",
+          "filing": "annual accounts",
+          "dueDate": "2027-07-31",
+          "daysUntilDue": 270
+        },
+        {
+          "companyName": "PURPLE STAG LIMITED",
+          "companyNumber": "11002886",
+          "filing": "annual accounts",
+          "dueDate": "2027-07-31",
+          "daysUntilDue": 270
+        },
+        {
+          "companyName": "PENTIUM LIMITED",
+          "companyNumber": "10259102",
+          "filing": "confirmation statement",
+          "dueDate": "2027-08-03",
+          "daysUntilDue": 273
+        },
+        {
+          "companyName": "KLASS HOLDINGS LTD",
+          "companyNumber": "14276671",
+          "filing": "confirmation statement",
+          "dueDate": "2027-08-17",
+          "daysUntilDue": 287
+        },
+        {
+          "companyName": "TRE YSGAWEN HALL LIMITED",
+          "companyNumber": "10945073",
+          "filing": "confirmation statement",
+          "dueDate": "2027-08-23",
+          "daysUntilDue": 293
+        },
+        {
+          "companyName": "SMILE HEALTH BY SOFIA DIAS LTD",
+          "companyNumber": "14290284",
+          "filing": "confirmation statement",
+          "dueDate": "2027-08-25",
+          "daysUntilDue": 295
+        },
+        {
+          "companyName": "HS SECURITY CONTRACTS LIMITED",
+          "companyNumber": "11676204",
+          "filing": "annual accounts",
+          "dueDate": "2027-08-29",
+          "daysUntilDue": 299
+        },
+        {
+          "companyName": "A&H ELECTRICS LTD",
+          "companyNumber": "11655411",
+          "filing": "annual accounts",
+          "dueDate": "2027-08-31",
+          "daysUntilDue": 301
+        },
+        {
+          "companyName": "C & I CLEANING SERVICES LTD",
+          "companyNumber": "15256527",
+          "filing": "annual accounts",
+          "dueDate": "2027-08-31",
+          "daysUntilDue": 301
+        },
+        {
+          "companyName": "C & L ELECTRICAL SOLUTIONS LTD",
+          "companyNumber": "11699448",
+          "filing": "annual accounts",
+          "dueDate": "2027-08-31",
+          "daysUntilDue": 301
+        },
+        {
+          "companyName": "TAILOR CARE LTD",
+          "companyNumber": "15296693",
+          "filing": "annual accounts",
+          "dueDate": "2027-08-31",
+          "daysUntilDue": 301
+        },
+        {
+          "companyName": "STEIN LAING LIMITED",
+          "companyNumber": "15417764",
+          "filing": "confirmation statement",
+          "dueDate": "2027-09-16",
+          "daysUntilDue": 317
+        },
+        {
+          "companyName": "MAK SMILE SERVICES LTD",
+          "companyNumber": "14347513",
+          "filing": "confirmation statement",
+          "dueDate": "2027-09-22",
+          "daysUntilDue": 323
+        },
+        {
+          "companyName": "ABABEEL RESTAURANT LTD",
+          "companyNumber": "10963784",
+          "filing": "confirmation statement",
+          "dueDate": "2027-09-27",
+          "daysUntilDue": 328
+        },
+        {
+          "companyName": "DRD PARTNERS LTD",
+          "companyNumber": "14361678",
+          "filing": "confirmation statement",
+          "dueDate": "2027-09-29",
+          "daysUntilDue": 330
+        },
+        {
+          "companyName": "AMPERE ELECTRICAL SERVICES LIMITED",
+          "companyNumber": "11722065",
+          "filing": "annual accounts",
+          "dueDate": "2027-09-30",
+          "daysUntilDue": 331
+        },
+        {
+          "companyName": "DYNASTY SERVICES LTD",
+          "companyNumber": "15373697",
+          "filing": "annual accounts",
+          "dueDate": "2027-09-30",
+          "daysUntilDue": 331
+        },
+        {
+          "companyName": "ELEKTROWE SOLUTIONS LIMITED",
+          "companyNumber": "11704747",
+          "filing": "annual accounts",
+          "dueDate": "2027-09-30",
+          "daysUntilDue": 331
+        },
+        {
+          "companyName": "GOODFELLOW ELECTRICAL SOLUTIONS LTD",
+          "companyNumber": "11714493",
+          "filing": "annual accounts",
+          "dueDate": "2027-09-30",
+          "daysUntilDue": 331
+        },
+        {
+          "companyName": "A&H ELECTRICS LTD",
+          "companyNumber": "11655411",
+          "filing": "confirmation statement",
+          "dueDate": "2027-10-02",
+          "daysUntilDue": 333
+        },
+        {
+          "companyName": "DAMBA CONSULTANTS LTD",
+          "companyNumber": "11040539",
+          "filing": "confirmation statement",
+          "dueDate": "2027-10-16",
+          "daysUntilDue": 347
+        },
+        {
+          "companyName": "ANNYLONDON ENTERPRISE LIMITED",
+          "companyNumber": "11000845",
+          "filing": "confirmation statement",
+          "dueDate": "2027-10-19",
+          "daysUntilDue": 350
+        },
+        {
+          "companyName": "PURPLE STAG LIMITED",
+          "companyNumber": "11002886",
+          "filing": "confirmation statement",
+          "dueDate": "2027-10-22",
+          "daysUntilDue": 353
+        },
+        {
+          "companyName": "FORBURY FM LTD",
+          "companyNumber": "15452348",
+          "filing": "annual accounts",
+          "dueDate": "2027-10-31",
+          "daysUntilDue": 362
+        },
+        {
+          "companyName": "KLF MECHANICAL & ELECTRICAL LTD",
+          "companyNumber": "11758074",
+          "filing": "annual accounts",
+          "dueDate": "2027-10-31",
+          "daysUntilDue": 362
+        },
+        {
+          "companyName": "SOUTHERN CLEANING SERVICES LTD",
+          "companyNumber": "15415042",
+          "filing": "annual accounts",
+          "dueDate": "2027-10-31",
+          "daysUntilDue": 362
+        },
+        {
+          "companyName": "STEIN LAING LIMITED",
+          "companyNumber": "15417764",
+          "filing": "annual accounts",
+          "dueDate": "2027-10-31",
+          "daysUntilDue": 362
+        },
+        {
+          "companyName": "CRIMPIT GROUP LTD",
+          "companyNumber": "13450658",
+          "filing": "confirmation statement",
+          "dueDate": "2027-11-16",
+          "daysUntilDue": 378
+        },
+        {
+          "companyName": "ALAND K BARBER LIMITED",
+          "companyNumber": "12459840",
+          "filing": "annual accounts",
+          "dueDate": "2027-11-30",
+          "daysUntilDue": 392
+        },
+        {
+          "companyName": "SMILE HEALTH BY SOFIA DIAS LTD",
+          "companyNumber": "14290284",
+          "filing": "annual accounts",
+          "dueDate": "2027-12-31",
+          "daysUntilDue": 423
+        },
+        {
+          "companyName": "TRANS ASSIST LIMITED",
+          "companyNumber": "09564150",
+          "filing": "annual accounts",
+          "dueDate": "2028-01-31",
+          "daysUntilDue": 454
+        },
+        {
+          "companyName": "LONGTOO LIMITED",
+          "companyNumber": "13403183",
+          "filing": "annual accounts",
+          "dueDate": "2028-02-29",
+          "daysUntilDue": 483
+        },
+        {
+          "companyName": "BANDING & STRAPPING LTD",
+          "companyNumber": "13413013",
+          "filing": "annual accounts",
+          "dueDate": "2028-03-31",
+          "daysUntilDue": 514
+        }
+      ]
+    }
+  ]
+}
